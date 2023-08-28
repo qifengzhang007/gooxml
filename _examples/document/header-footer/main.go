@@ -12,9 +12,10 @@ import (
 )
 
 func main() {
+	var pathPre = "F:/Project/2023/word-format/使用的库代码参考/gooxml/_examples/document/header-footer/"
 	doc := document.New()
 
-	img, err := common.ImageFromFile("gophercolor.png")
+	img, err := common.ImageFromFile(pathPre + "gophercolor.png")
 	if err != nil {
 		log.Fatalf("unable to create image: %s", err)
 	}
@@ -31,7 +32,7 @@ func main() {
 	para.Properties().AddTabStop(2.5*measurement.Inch, wml.ST_TabJcCenter, wml.ST_TabTlcNone)
 	run := para.AddRun()
 	run.AddTab()
-	run.AddText("My Document Title")
+	run.AddText("文档标题")
 
 	imgInl, _ := para.AddRun().AddDrawingInline(iref)
 	imgInl.SetSize(1*measurement.Inch, 1*measurement.Inch)
@@ -52,7 +53,7 @@ func main() {
 	run.AddField(document.FieldNumberOfPages)
 	doc.BodySection().SetFooter(ftr, wml.ST_HdrFtrDefault)
 
-	lorem := `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lobortis, lectus dictum feugiat tempus, sem neque finibus enim, sed eleifend sem nunc ac diam. Vestibulum tempus sagittis elementum`
+	lorem := `新的测试段落文本`
 
 	for i := 0; i < 5; i++ {
 		para = doc.AddParagraph()
@@ -60,5 +61,5 @@ func main() {
 		run.AddText(lorem)
 	}
 
-	doc.SaveToFile("header-footer.docx")
+	doc.SaveToFile(pathPre + "header-footer-2.docx")
 }

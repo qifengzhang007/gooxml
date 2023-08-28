@@ -9,7 +9,8 @@ import (
 )
 
 func main() {
-	doc, err := document.Open("form.docx")
+	var pathPre = "F:/Project/2023/word-format/使用的库代码参考/gooxml/_examples/document/fill-out-form/"
+	doc, err := document.Open(pathPre + "form.docx")
 	if err != nil {
 		log.Fatalf("error opening form: %s", err)
 	}
@@ -39,5 +40,5 @@ func main() {
 		}
 	}
 
-	doc.SaveToFile("filled-form.docx")
+	doc.SaveToFile(pathPre + "filled-form-2.docx")
 }

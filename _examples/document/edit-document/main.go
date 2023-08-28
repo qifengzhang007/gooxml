@@ -11,7 +11,8 @@ import (
 )
 
 func main() {
-	doc, err := document.Open("document.docx")
+	var pathPre = "F:/Project/2023/word-format/使用的库代码参考/gooxml/_examples/document/edit-document/"
+	doc, err := document.Open(pathPre + "document.docx")
 	if err != nil {
 		log.Fatalf("error opening document: %s", err)
 	}
@@ -37,26 +38,26 @@ func main() {
 				// ClearContent clears both text and line breaks within a run,
 				// so we need to add the line break back
 				r.ClearContent()
-				r.AddText("John ")
-				r.AddBreak()
+				r.AddText("张 ")
+				r.AddBreak() // 换行
 
 				para := doc.InsertParagraphBefore(p)
-				para.AddRun().AddText("Mr.")
+				para.AddRun().AddText("1-前面插入一段.")
 				para.SetStyle("Name") // Name is a default style in this template file
 
 				para = doc.InsertParagraphAfter(p)
-				para.AddRun().AddText("III")
+				para.AddRun().AddText("2-前面插入一段")
 				para.SetStyle("Name")
 
 			case "LAST NAME":
 				r.ClearContent()
-				r.AddText("Smith")
+				r.AddText("三丰")
 			case "Address | Phone | Email":
 				r.ClearContent()
-				r.AddText("111 Rustic Rd | 123-456-7890 | jsmith@smith.com")
+				r.AddText("上海 | 松江| 1990850157qq.com | 166")
 			case "Date":
 				r.ClearContent()
-				r.AddText(time.Now().Format("Jan 2, 2006"))
+				r.AddText(time.Now().Format("2006-01-02 15:04:05"))
 			case "Recipient Name":
 				r.ClearContent()
 				r.AddText("Mrs. Smith")
@@ -97,5 +98,5 @@ func main() {
 		}
 	}
 
-	doc.SaveToFile("edit-document.docx")
+	doc.SaveToFile(pathPre + "edit-document2.docx")
 }

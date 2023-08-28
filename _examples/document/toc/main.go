@@ -10,6 +10,8 @@ import (
 var lorem = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lobortis, lectus dictum feugiat tempus, sem neque finibus enim, sed eleifend sem nunc ac diam. Vestibulum tempus sagittis elementum`
 
 func main() {
+	var pathPre = "F:/Project/2023/word-format/使用的库代码参考/gooxml/_examples/document/toc/"
+
 	doc := document.New()
 
 	// Force the TOC to update upon opening the document
@@ -55,5 +57,5 @@ func main() {
 			doc.AddParagraph().AddRun().AddText(lorem)
 		}
 	}
-	doc.SaveToFile("toc.docx")
+	doc.SaveToFile(pathPre + "toc.docx")
 }

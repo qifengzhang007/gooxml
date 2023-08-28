@@ -11,7 +11,7 @@ import (
 )
 
 func main() {
-	doc, err := document.Open("document.docx")
+	doc, err := document.Open("F:/Project/2023/word-format/使用的库代码参考/gooxml/_examples/document/doc-properties/document.docx")
 	if err != nil {
 		log.Fatalf("error opening document: %s", err)
 	}
