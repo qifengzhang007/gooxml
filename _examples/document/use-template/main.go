@@ -3,8 +3,6 @@
 package main
 
 import (
-	"fmt"
-	"github.com/carmel/gooxml/color"
 	"log"
 
 	"github.com/carmel/gooxml/document"
@@ -35,40 +33,40 @@ func main() {
 	//}
 
 	// 遍历所有的段落
-	for index, graph := range doc.Paragraphs() {
-		fmt.Printf("%d - 段落样式：%s\n", index, graph.Style())
-		graph.AddRun().Properties().SetColor(color.RGB(220, 12, 12))
-		graph.AddRun()
-		//prop.SetFontFamily("微软雅黑") // 设置字体
-		//prop.SetBold(true)
-		//prop.SetColor(color.RGB(220, 12, 12))
-	}
+	//for index, graph := range doc.Paragraphs() {
+	//	fmt.Printf("%d - 段落样式：%s\n", index, graph.Style())
+	//	graph.AddRun().Properties().SetColor(color.RGB(220, 12, 12))
+	//	graph.AddRun()
+	//	//prop.SetFontFamily("微软雅黑") // 设置字体
+	//	//prop.SetBold(true)
+	//	//prop.SetColor(color.RGB(220, 12, 12))
+	//}
 
 	// And create documents setting their style to the style ID (not style name).
-	//para := doc.AddParagraph()
-	//para.SetStyle("Title")
-	//para.AddRun().AddText("My Document Title")
-	//
-	//para = doc.AddParagraph()
-	//para.SetStyle("Subtitle")
-	//para.AddRun().AddText("Document Subtitle")
-	//
-	//para = doc.AddParagraph()
-	//para.SetStyle("Heading1")
-	//para.AddRun().AddText("Major Section")
-	//para = doc.AddParagraph()
-	//para = doc.AddParagraph()
-	//for i := 0; i < 4; i++ {
-	//	para.AddRun().AddText(lorem)
-	//}
-	//
-	//para = doc.AddParagraph()
-	//para.SetStyle("Heading2")
-	//para.AddRun().AddText("Minor Section")
-	//para = doc.AddParagraph()
-	//for i := 0; i < 4; i++ {
-	//	para.AddRun().AddText(lorem)
-	//}
+	para := doc.AddParagraph()
+	para.SetStyle("Title")
+	para.AddRun().AddText("My Document Title")
+
+	para = doc.AddParagraph()
+	para.SetStyle("Subtitle")
+	para.AddRun().AddText("Document Subtitle")
+
+	para = doc.AddParagraph()
+	para.SetStyle("Heading1")
+	para.AddRun().AddText("Major Section")
+	para = doc.AddParagraph()
+	para = doc.AddParagraph()
+	for i := 0; i < 4; i++ {
+		para.AddRun().AddText(lorem)
+	}
+
+	para = doc.AddParagraph()
+	para.SetStyle("Heading2")
+	para.AddRun().AddText("Minor Section")
+	para = doc.AddParagraph()
+	for i := 0; i < 4; i++ {
+		para.AddRun().AddText(lorem)
+	}
 
 	// using a pre-defined table style
 	//table := doc.AddTable()
