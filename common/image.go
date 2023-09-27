@@ -13,7 +13,7 @@ import (
 	"image"
 	"os"
 
-	"github.com/carmel/gooxml/measurement"
+	"github.com/qifengzhang007/gooxml/measurement"
 	// Add image format support
 	_ "image/gif"
 	_ "image/jpeg"

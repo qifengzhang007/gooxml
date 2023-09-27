@@ -4,9 +4,9 @@ package main
 import (
 	"log"
 
-	"github.com/carmel/gooxml/document"
-	"github.com/carmel/gooxml/measurement"
-	"github.com/carmel/gooxml/schema/soo/wml"
+	"github.com/qifengzhang007/gooxml/document"
+	"github.com/qifengzhang007/gooxml/measurement"
+	"github.com/qifengzhang007/gooxml/schema/soo/wml"
 )
 
 func main() {
@@ -31,5 +31,5 @@ func main() {
 	if err := doc.Validate(); err != nil {
 		log.Fatalf("error during validation: %s", err)
 	}
-	doc.SaveToFile("line-spacing.docx")
+	doc.SaveToFile("F:\\OpenSource\\gooxml\\_examples\\document\\line-spacing\\" + "line-spacing.docx")
 }

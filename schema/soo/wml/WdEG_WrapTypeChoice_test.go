@@ -13,7 +13,7 @@ import (
 	"encoding/xml"
 	"testing"
 
-	"github.com/carmel/gooxml/schema/soo/wml"
+	"github.com/qifengzhang007/gooxml/schema/soo/wml"
 )
 
 func TestWdEG_WrapTypeChoiceConstructor(t *testing.T) {

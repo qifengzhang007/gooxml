@@ -13,7 +13,7 @@ import (
 	"io/ioutil"
 	"testing"
 
-	"github.com/carmel/gooxml/zippkg"
+	"github.com/qifengzhang007/gooxml/zippkg"
 )
 
 type TestStruct struct {

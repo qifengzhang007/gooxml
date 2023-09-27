@@ -15,7 +15,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/carmel/gooxml"
+	"github.com/qifengzhang007/gooxml"
 )
 
 type CT_TblPrChange struct {

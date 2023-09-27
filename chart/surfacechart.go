@@ -8,10 +8,10 @@
 package chart
 
 import (
-	"github.com/carmel/gooxml"
-	"github.com/carmel/gooxml/drawing"
-	"github.com/carmel/gooxml/schema/soo/dml"
-	crt "github.com/carmel/gooxml/schema/soo/dml/chart"
+	"github.com/qifengzhang007/gooxml"
+	"github.com/qifengzhang007/gooxml/drawing"
+	"github.com/qifengzhang007/gooxml/schema/soo/dml"
+	crt "github.com/qifengzhang007/gooxml/schema/soo/dml/chart"
 )
 
 // SurfaceChart is a 3D surface chart, viewed from the top-down.

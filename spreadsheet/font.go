@@ -8,8 +8,8 @@
 package spreadsheet
 
 import (
-	"github.com/carmel/gooxml/color"
-	"github.com/carmel/gooxml/schema/soo/sml"
+	"github.com/qifengzhang007/gooxml/color"
+	"github.com/qifengzhang007/gooxml/schema/soo/sml"
 )
 
 // Font allows editing fonts within a spreadsheet stylesheet.

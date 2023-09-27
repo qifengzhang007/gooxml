@@ -8,10 +8,10 @@
 package document
 
 import (
-	"github.com/carmel/gooxml"
-	"github.com/carmel/gooxml/measurement"
-	"github.com/carmel/gooxml/schema/soo/ofc/sharedTypes"
-	"github.com/carmel/gooxml/schema/soo/wml"
+	"github.com/qifengzhang007/gooxml"
+	"github.com/qifengzhang007/gooxml/measurement"
+	"github.com/qifengzhang007/gooxml/schema/soo/ofc/sharedTypes"
+	"github.com/qifengzhang007/gooxml/schema/soo/wml"
 )
 
 // ParagraphSpacing controls the spacing for a paragraph and its lines.
@@ -20,15 +20,31 @@ type ParagraphSpacing struct {
 }
 
 // SetBefore sets the spacing that comes before the paragraph.
+// @before When setting paragraph spacing, the unit must be set in points.
 func (p ParagraphSpacing) SetBefore(before measurement.Distance) {
 	p.x.BeforeAttr = &sharedTypes.ST_TwipsMeasure{}
 	p.x.BeforeAttr.ST_UnsignedDecimalNumber = gooxml.Uint64(uint64(before / measurement.Twips))
+	p.setBeforeLine(before)
+}
+
+// setBeforeLine
+// Used with the previous function, if the original word document paragraph spacing is set by behavioral units. Not call setBeforeLine is not achieve the effect.
+// @point unit  is  point
+func (p ParagraphSpacing) setBeforeLine(point measurement.Distance) {
+	p.x.BeforeLinesAttr = gooxml.Int64(int64(point * 100))
 }
 
 // SetAfter sets the spacing that comes after the paragraph.
 func (p ParagraphSpacing) SetAfter(after measurement.Distance) {
 	p.x.AfterAttr = &sharedTypes.ST_TwipsMeasure{}
 	p.x.AfterAttr.ST_UnsignedDecimalNumber = gooxml.Uint64(uint64(after / measurement.Twips))
+	p.setAfterLine(after)
+}
+
+// setAfterLine sets the spacing that comes before the paragraph.
+// @point unit  is  point
+func (p ParagraphSpacing) setAfterLine(point measurement.Distance) {
+	p.x.AfterLinesAttr = gooxml.Int64(int64(point * 100))
 }
 
 // SetLineSpacing sets the spacing between lines in a paragraph.

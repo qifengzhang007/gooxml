@@ -13,7 +13,7 @@ import (
 	"encoding/xml"
 	"testing"
 
-	"github.com/carmel/gooxml/schema/soo/pkg/metadata/core_properties"
+	"github.com/qifengzhang007/gooxml/schema/soo/pkg/metadata/core_properties"
 )
 
 func TestCorePropertiesConstructor(t *testing.T) {

@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/carmel/gooxml/document"
+	"github.com/qifengzhang007/gooxml/document"
 )
 
 var lorem = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lobortis, lectus dictum feugiat tempus, sem neque finibus enim, sed eleifend sem nunc ac diam. Vestibulum tempus sagittis elementum`

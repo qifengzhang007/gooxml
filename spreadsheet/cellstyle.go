@@ -8,8 +8,8 @@
 package spreadsheet
 
 import (
-	"github.com/carmel/gooxml"
-	"github.com/carmel/gooxml/schema/soo/sml"
+	"github.com/qifengzhang007/gooxml"
+	"github.com/qifengzhang007/gooxml/schema/soo/sml"
 )
 
 // CellStyle is a formatting style for a cell.  CellStyles are spreadsheet global

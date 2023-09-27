@@ -13,7 +13,7 @@ import (
 	"encoding/xml"
 	"testing"
 
-	"github.com/carmel/gooxml/schema/soo/pkg/content_types"
+	"github.com/qifengzhang007/gooxml/schema/soo/pkg/content_types"
 )
 
 func TestTypesConstructor(t *testing.T) {

@@ -10,10 +10,10 @@ package document
 import (
 	"fmt"
 
-	"github.com/carmel/gooxml"
-	"github.com/carmel/gooxml/measurement"
-	"github.com/carmel/gooxml/schema/soo/ofc/sharedTypes"
-	"github.com/carmel/gooxml/schema/soo/wml"
+	"github.com/qifengzhang007/gooxml"
+	"github.com/qifengzhang007/gooxml/measurement"
+	"github.com/qifengzhang007/gooxml/schema/soo/ofc/sharedTypes"
+	"github.com/qifengzhang007/gooxml/schema/soo/wml"
 )
 
 // ParagraphProperties are the properties for a paragraph.

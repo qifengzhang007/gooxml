@@ -14,8 +14,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/carmel/gooxml"
-	"github.com/carmel/gooxml/schema/soo/dml"
+	"github.com/qifengzhang007/gooxml"
+	"github.com/qifengzhang007/gooxml/schema/soo/dml"
 )
 
 func ParseUnionST_TLTime(s string) (ST_TLTime, error) {

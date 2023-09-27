@@ -1,3 +1,13 @@
+** Notice**
+Special thanks to the original author for the open source library: https://github.com/carmel/gooxml.
+As the original repository is not maintained , can not repair the original repository by submitting the code in the way of problems , so I used the original repository of the code , for secondary development / repair some of the possible bugs .
+
+ <hr/>
+
+特别感谢原作者提供的开源库：https://github.com/carmel/gooxml。
+由于原始仓库不在维护,无法通过提交代码的方式修复原始仓库中存在的问题，因此我使用了原始仓库的代码，进行二次开发/修复一些可能存在的bug.
+
+ <hr/>
 **gooxml** is a library for creation of Office Open XML documents (.docx, .xlsx
 and .pptx).  It's goal is to be the most compatible and highest performance Go
 library for creation and editing of docx/xlsx/pptx files.
@@ -5,7 +15,7 @@ library for creation and editing of docx/xlsx/pptx files.
 Requires **go1.8+**, builds are tested with 1.8, 1.9 and tip.
 
 [![Build Status](https://travis-ci.org/baliance/gooxml.svg?branch=master)](https://travis-ci.org/baliance/gooxml)
-[![GitHub (pre-)release](https://img.shields.io/github/release/baliance/gooxml/all.svg)](https://github.com/carmel/gooxml/releases)
+[![GitHub (pre-)release](https://img.shields.io/github/release/baliance/gooxml/all.svg)](https://github.com/qifengzhang007/gooxml/releases)
 [![License: AGPL v3](https://img.shields.io/badge/License-Dual%20AGPL%20v3/Commercial-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
 [![GoDoc](https://godoc.org/baliance.com/gooxml?status.svg)](https://godoc.org/baliance.com/gooxml)
 [![go 1.8+](https://img.shields.io/badge/go-1.8%2B-blue.svg)](http://golang.org)
@@ -36,7 +46,7 @@ Requires **go1.8+**, builds are tested with 1.8, 1.9 and tip.
 
 There has been a great deal of interest in performance numbers for spreadsheet
 creation/reading lately, so here are gooxml numbers for this
-[benchmark](https://github.com/carmel/gooxml/tree/master/_examples/spreadsheet/lots-of-rows)
+[benchmark](https://github.com/qifengzhang007/gooxml/tree/master/_examples/spreadsheet/lots-of-rows)
 which creates a sheet with 30k rows, each with 100 columns.
 
     creating 30000 rows * 100 cells took 3.92506863s
@@ -55,36 +65,36 @@ DOCX/XLSX/PPTX.
 
 ## Document Examples ##
 
-- [Simple Text Formatting](https://github.com/carmel/gooxml/tree/master/_examples/document/simple) Text font colors, sizes, highlighting, etc.
-- [Auto Generated Table of Contents](https://github.com/carmel/gooxml/tree/master/_examples/document/toc) Creating document headings with an auto generated TOC based off of the headingds
-- [Floating Image](https://github.com/carmel/gooxml/tree/master/_examples/document/image) Placing an image somewhere on a page, absolutely positioned with different text wrapping.
-- [Header & Footer](https://github.com/carmel/gooxml/tree/master/_examples/document/header-footer) Creating headers and footers including page numbering.
-- [Multiple Headers & Footers](https://github.com/carmel/gooxml/tree/master/_examples/document/header-footer-multiple) Using different headers and footers depending on document section.
-- [Inline Tables](https://github.com/carmel/gooxml/tree/master/_examples/document/tables) Adding an table with and without borders.
-- [Using Existing Word Document as a Template](https://github.com/carmel/gooxml/tree/master/_examples/document/use-template) Opening a document as a template to re-use the styles created in the document.
-- [Filling out Form Fields](https://github.com/carmel/gooxml/tree/master/_examples/document/fill-out-form) Opening a document with embedded form fields, filling out the fields and saving the result as  a new filled form.
-- [Editing an existing document](https://github.com/carmel/gooxml/tree/master/_examples/document/edit-document) Open an existing document and replace/remove text without modifying formatting.
+- [Simple Text Formatting](https://github.com/qifengzhang007/gooxml/tree/master/_examples/document/simple) Text font colors, sizes, highlighting, etc.
+- [Auto Generated Table of Contents](https://github.com/qifengzhang007/gooxml/tree/master/_examples/document/toc) Creating document headings with an auto generated TOC based off of the headingds
+- [Floating Image](https://github.com/qifengzhang007/gooxml/tree/master/_examples/document/image) Placing an image somewhere on a page, absolutely positioned with different text wrapping.
+- [Header & Footer](https://github.com/qifengzhang007/gooxml/tree/master/_examples/document/header-footer) Creating headers and footers including page numbering.
+- [Multiple Headers & Footers](https://github.com/qifengzhang007/gooxml/tree/master/_examples/document/header-footer-multiple) Using different headers and footers depending on document section.
+- [Inline Tables](https://github.com/qifengzhang007/gooxml/tree/master/_examples/document/tables) Adding an table with and without borders.
+- [Using Existing Word Document as a Template](https://github.com/qifengzhang007/gooxml/tree/master/_examples/document/use-template) Opening a document as a template to re-use the styles created in the document.
+- [Filling out Form Fields](https://github.com/qifengzhang007/gooxml/tree/master/_examples/document/fill-out-form) Opening a document with embedded form fields, filling out the fields and saving the result as  a new filled form.
+- [Editing an existing document](https://github.com/qifengzhang007/gooxml/tree/master/_examples/document/edit-document) Open an existing document and replace/remove text without modifying formatting.
 
 ## Spreadsheet Examples ##
-- [Simple](https://github.com/carmel/gooxml/tree/master/_examples/spreadsheet/simple) A simple sheet with a few cells
-- [Named Cells](https://github.com/carmel/gooxml/tree/master/_examples/spreadsheet/named-cells) Different ways of referencing rows and cells
-- [Cell Number/Date/Time Formats](https://github.com/carmel/gooxml/tree/master/_examples/spreadsheet/number-date-time-formats) Creating cells with various number/date/time formats
-- [Line Chart](https://github.com/carmel/gooxml/tree/master/_examples/spreadsheet/line-chart)/[Line Chart 3D](https://github.com/carmel/gooxml/tree/master/_examples/spreadsheet/line-chart-3d) Line Charts
-- [Bar Chart](https://github.com/carmel/gooxml/tree/master/_examples/spreadsheet/bar-chart) Bar Charts
-- [Mutiple Charts](https://github.com/carmel/gooxml/tree/master/_examples/spreadsheet/multiple-charts) Multiple charts on a single sheet
-- [Named Cell Ranges](https://github.com/carmel/gooxml/tree/master/_examples/spreadsheet/named-ranges) Naming cell ranges
-- [Merged Cells](https://github.com/carmel/gooxml/tree/master/_examples/spreadsheet/merged) Merge and unmerge cells
-- [Conditional Formatting](https://github.com/carmel/gooxml/tree/master/_examples/spreadsheet/conditional-formatting) Conditionally formatting cells, styling, gradients, icons, data bar
-- [Complex](https://github.com/carmel/gooxml/tree/master/_examples/spreadsheet/complex) Multiple charts, auto filtering and conditional formatting
-- [Borders](https://github.com/carmel/gooxml/tree/master/_examples/spreadsheet/borders) Individual cell borders and rectangular borders around a range of cells.
-- [Validation](https://github.com/carmel/gooxml/tree/master/_examples/spreadsheet/validation) Data validation including combo box dropdowns.
-- [Frozen Rows/Cols](https://github.com/carmel/gooxml/tree/master/_examples/spreadsheet/freeze-rows-cols) A sheet with a frozen header column and row
+- [Simple](https://github.com/qifengzhang007/gooxml/tree/master/_examples/spreadsheet/simple) A simple sheet with a few cells
+- [Named Cells](https://github.com/qifengzhang007/gooxml/tree/master/_examples/spreadsheet/named-cells) Different ways of referencing rows and cells
+- [Cell Number/Date/Time Formats](https://github.com/qifengzhang007/gooxml/tree/master/_examples/spreadsheet/number-date-time-formats) Creating cells with various number/date/time formats
+- [Line Chart](https://github.com/qifengzhang007/gooxml/tree/master/_examples/spreadsheet/line-chart)/[Line Chart 3D](https://github.com/qifengzhang007/gooxml/tree/master/_examples/spreadsheet/line-chart-3d) Line Charts
+- [Bar Chart](https://github.com/qifengzhang007/gooxml/tree/master/_examples/spreadsheet/bar-chart) Bar Charts
+- [Mutiple Charts](https://github.com/qifengzhang007/gooxml/tree/master/_examples/spreadsheet/multiple-charts) Multiple charts on a single sheet
+- [Named Cell Ranges](https://github.com/qifengzhang007/gooxml/tree/master/_examples/spreadsheet/named-ranges) Naming cell ranges
+- [Merged Cells](https://github.com/qifengzhang007/gooxml/tree/master/_examples/spreadsheet/merged) Merge and unmerge cells
+- [Conditional Formatting](https://github.com/qifengzhang007/gooxml/tree/master/_examples/spreadsheet/conditional-formatting) Conditionally formatting cells, styling, gradients, icons, data bar
+- [Complex](https://github.com/qifengzhang007/gooxml/tree/master/_examples/spreadsheet/complex) Multiple charts, auto filtering and conditional formatting
+- [Borders](https://github.com/qifengzhang007/gooxml/tree/master/_examples/spreadsheet/borders) Individual cell borders and rectangular borders around a range of cells.
+- [Validation](https://github.com/qifengzhang007/gooxml/tree/master/_examples/spreadsheet/validation) Data validation including combo box dropdowns.
+- [Frozen Rows/Cols](https://github.com/qifengzhang007/gooxml/tree/master/_examples/spreadsheet/freeze-rows-cols) A sheet with a frozen header column and row
 
 ## Presentation Examples ##
 
-- [Simple Text Boxes](https://github.com/carmel/gooxml/tree/master/_examples/presentation/simple) Simple text boxes and shapes
-- [Images](https://github.com/carmel/gooxml/tree/master/_examples/presentation/image) Simple image insertion
-- [Template](https://github.com/carmel/gooxml/tree/master/_examples/presentation/use-template/simple) Creating a presentation from a template
+- [Simple Text Boxes](https://github.com/qifengzhang007/gooxml/tree/master/_examples/presentation/simple) Simple text boxes and shapes
+- [Images](https://github.com/qifengzhang007/gooxml/tree/master/_examples/presentation/image) Simple image insertion
+- [Template](https://github.com/qifengzhang007/gooxml/tree/master/_examples/presentation/use-template/simple) Creating a presentation from a template
 
 ## Raw Types ##
 

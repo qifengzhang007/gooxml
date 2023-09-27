@@ -12,7 +12,7 @@ package sml
 import (
 	"encoding/xml"
 
-	"github.com/carmel/gooxml"
+	"github.com/qifengzhang007/gooxml"
 )
 
 type SingleXmlCells struct {

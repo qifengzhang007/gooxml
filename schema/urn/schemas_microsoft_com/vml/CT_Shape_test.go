@@ -13,7 +13,7 @@ import (
 	"encoding/xml"
 	"testing"
 
-	"github.com/carmel/gooxml/schema/urn/schemas_microsoft_com/vml"
+	"github.com/qifengzhang007/gooxml/schema/urn/schemas_microsoft_com/vml"
 )
 
 func TestCT_ShapeConstructor(t *testing.T) {

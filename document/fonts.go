@@ -7,7 +7,7 @@
 
 package document
 
-import "github.com/carmel/gooxml/schema/soo/wml"
+import "github.com/qifengzhang007/gooxml/schema/soo/wml"
 
 // Fonts allows manipulating a style or run's fonts.
 type Fonts struct {

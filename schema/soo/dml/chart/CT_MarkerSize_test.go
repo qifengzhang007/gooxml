@@ -13,7 +13,7 @@ import (
 	"encoding/xml"
 	"testing"
 
-	"github.com/carmel/gooxml/schema/soo/dml/chart"
+	"github.com/qifengzhang007/gooxml/schema/soo/dml/chart"
 )
 
 func TestCT_MarkerSizeConstructor(t *testing.T) {

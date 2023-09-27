@@ -8,10 +8,11 @@
 package document
 
 import (
-	"github.com/carmel/gooxml/schema/soo/wml"
+	"github.com/qifengzhang007/gooxml/schema/soo/wml"
 )
 
 // FormFieldType is the type of the form field.
+//
 //go:generate stringer -type=FormFieldType
 type FormFieldType byte
 

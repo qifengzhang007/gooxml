@@ -13,7 +13,7 @@ import (
 	"encoding/xml"
 	"testing"
 
-	"github.com/carmel/gooxml/schema/soo/dml"
+	"github.com/qifengzhang007/gooxml/schema/soo/dml"
 )
 
 func TestEG_TextGeometryConstructor(t *testing.T) {
