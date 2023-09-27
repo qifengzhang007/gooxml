@@ -18,49 +18,49 @@ import (
 
 // ParagraphProperties are the properties for a paragraph.
 type ParagraphProperties struct {
-	d *Document
-	x *wml.CT_PPr
+	D     *Document
+	CtPPr *wml.CT_PPr
 }
 
 // X returns the inner wrapped XML type.
 func (p ParagraphProperties) X() *wml.CT_PPr {
-	return p.x
+	return p.CtPPr
 }
 
 // SetSpacing sets the spacing that comes before and after the paragraph.
 // Deprecated: See Spacing() instead which allows finer control.
 func (p ParagraphProperties) SetSpacing(before, after measurement.Distance) {
-	if p.x.Spacing == nil {
-		p.x.Spacing = wml.NewCT_Spacing()
+	if p.CtPPr.Spacing == nil {
+		p.CtPPr.Spacing = wml.NewCT_Spacing()
 	}
-	p.x.Spacing.BeforeAttr = &sharedTypes.ST_TwipsMeasure{}
-	p.x.Spacing.BeforeAttr.ST_UnsignedDecimalNumber = gooxml.Uint64(uint64(before / measurement.Twips))
-	p.x.Spacing.AfterAttr = &sharedTypes.ST_TwipsMeasure{}
-	p.x.Spacing.AfterAttr.ST_UnsignedDecimalNumber = gooxml.Uint64(uint64(after / measurement.Twips))
+	p.CtPPr.Spacing.BeforeAttr = &sharedTypes.ST_TwipsMeasure{}
+	p.CtPPr.Spacing.BeforeAttr.ST_UnsignedDecimalNumber = gooxml.Uint64(uint64(before / measurement.Twips))
+	p.CtPPr.Spacing.AfterAttr = &sharedTypes.ST_TwipsMeasure{}
+	p.CtPPr.Spacing.AfterAttr.ST_UnsignedDecimalNumber = gooxml.Uint64(uint64(after / measurement.Twips))
 }
 
 // Spacing returns the paragraph spacing settings.
 func (p ParagraphProperties) Spacing() ParagraphSpacing {
-	if p.x.Spacing == nil {
-		p.x.Spacing = wml.NewCT_Spacing()
+	if p.CtPPr.Spacing == nil {
+		p.CtPPr.Spacing = wml.NewCT_Spacing()
 	}
-	return ParagraphSpacing{p.x.Spacing}
+	return ParagraphSpacing{p.CtPPr.Spacing}
 }
 
 // SetAlignment controls the paragraph alignment
 func (p ParagraphProperties) SetAlignment(align wml.ST_Jc) {
 	if align == wml.ST_JcUnset {
-		p.x.Jc = nil
+		p.CtPPr.Jc = nil
 	} else {
-		p.x.Jc = wml.NewCT_Jc()
-		p.x.Jc.ValAttr = align
+		p.CtPPr.Jc = wml.NewCT_Jc()
+		p.CtPPr.Jc.ValAttr = align
 	}
 }
 
 // Style returns the style for a paragraph, or an empty string if it is unset.
 func (p ParagraphProperties) Style() string {
-	if p.x.PStyle != nil {
-		return p.x.PStyle.ValAttr
+	if p.CtPPr.PStyle != nil {
+		return p.CtPPr.PStyle.ValAttr
 	}
 	return ""
 }
@@ -68,34 +68,34 @@ func (p ParagraphProperties) Style() string {
 // SetStyle sets the style of a paragraph.
 func (p ParagraphProperties) SetStyle(s string) {
 	if s == "" {
-		p.x.PStyle = nil
+		p.CtPPr.PStyle = nil
 	} else {
-		p.x.PStyle = wml.NewCT_String()
-		p.x.PStyle.ValAttr = s
+		p.CtPPr.PStyle = wml.NewCT_String()
+		p.CtPPr.PStyle.ValAttr = s
 	}
 }
 
 // AddTabStop adds a tab stop to the paragraph.  It controls the position of text when using Run.AddTab()
 func (p ParagraphProperties) AddTabStop(position measurement.Distance, justificaton wml.ST_TabJc, leader wml.ST_TabTlc) {
-	if p.x.Tabs == nil {
-		p.x.Tabs = wml.NewCT_Tabs()
+	if p.CtPPr.Tabs == nil {
+		p.CtPPr.Tabs = wml.NewCT_Tabs()
 	}
 	tab := wml.NewCT_TabStop()
 	tab.LeaderAttr = leader
 	tab.ValAttr = justificaton
 	tab.PosAttr.Int64 = gooxml.Int64(int64(position / measurement.Twips))
-	p.x.Tabs.Tab = append(p.x.Tabs.Tab, tab)
+	p.CtPPr.Tabs.Tab = append(p.CtPPr.Tabs.Tab, tab)
 }
 
 // AddSection adds a new document section with an optional section break.  If t
 // is ST_SectionMarkUnset, then no break will be inserted.
 func (p ParagraphProperties) AddSection(t wml.ST_SectionMark) Section {
-	p.x.SectPr = wml.NewCT_SectPr()
+	p.CtPPr.SectPr = wml.NewCT_SectPr()
 	if t != wml.ST_SectionMarkUnset {
-		p.x.SectPr.Type = wml.NewCT_SectType()
-		p.x.SectPr.Type.ValAttr = t
+		p.CtPPr.SectPr.Type = wml.NewCT_SectType()
+		p.CtPPr.SectPr.Type.ValAttr = t
 	}
-	return Section{p.d, p.x.SectPr}
+	return Section{p.D, p.CtPPr.SectPr}
 }
 
 // SetHeadingLevel sets a heading level and style based on the level to a
@@ -103,19 +103,19 @@ func (p ParagraphProperties) AddSection(t wml.ST_SectionMark) Section {
 // from level 1 to 8.
 func (p ParagraphProperties) SetHeadingLevel(idx int) {
 	p.SetStyle(fmt.Sprintf("Heading%d", idx))
-	if p.x.NumPr == nil {
-		p.x.NumPr = wml.NewCT_NumPr()
+	if p.CtPPr.NumPr == nil {
+		p.CtPPr.NumPr = wml.NewCT_NumPr()
 	}
-	p.x.NumPr.Ilvl = wml.NewCT_DecimalNumber()
-	p.x.NumPr.Ilvl.ValAttr = int64(idx)
+	p.CtPPr.NumPr.Ilvl = wml.NewCT_DecimalNumber()
+	p.CtPPr.NumPr.Ilvl.ValAttr = int64(idx)
 }
 
 // SetKeepWithNext controls if this paragraph should be kept with the next.
 func (p ParagraphProperties) SetKeepWithNext(b bool) {
 	if !b {
-		p.x.KeepNext = nil
+		p.CtPPr.KeepNext = nil
 	} else {
-		p.x.KeepNext = wml.NewCT_OnOff()
+		p.CtPPr.KeepNext = wml.NewCT_OnOff()
 	}
 }
 
@@ -123,18 +123,18 @@ func (p ParagraphProperties) SetKeepWithNext(b bool) {
 // page.
 func (p ParagraphProperties) SetKeepOnOnePage(b bool) {
 	if !b {
-		p.x.KeepLines = nil
+		p.CtPPr.KeepLines = nil
 	} else {
-		p.x.KeepLines = wml.NewCT_OnOff()
+		p.CtPPr.KeepLines = wml.NewCT_OnOff()
 	}
 }
 
 // SetPageBreakBefore controls if there is a page break before this paragraph.
 func (p ParagraphProperties) SetPageBreakBefore(b bool) {
 	if !b {
-		p.x.PageBreakBefore = nil
+		p.CtPPr.PageBreakBefore = nil
 	} else {
-		p.x.PageBreakBefore = wml.NewCT_OnOff()
+		p.CtPPr.PageBreakBefore = wml.NewCT_OnOff()
 	}
 }
 
@@ -142,60 +142,60 @@ func (p ParagraphProperties) SetPageBreakBefore(b bool) {
 // allowed to dispay on a separate page.
 func (p ParagraphProperties) SetWindowControl(b bool) {
 	if !b {
-		p.x.WidowControl = nil
+		p.CtPPr.WidowControl = nil
 	} else {
-		p.x.WidowControl = wml.NewCT_OnOff()
+		p.CtPPr.WidowControl = wml.NewCT_OnOff()
 	}
 }
 
 // SetFirstLineIndent controls the indentation of the first line in a paragraph.
 func (p ParagraphProperties) SetFirstLineIndent(m measurement.Distance) {
-	if p.x.Ind == nil {
-		p.x.Ind = wml.NewCT_Ind()
+	if p.CtPPr.Ind == nil {
+		p.CtPPr.Ind = wml.NewCT_Ind()
 	}
 	if m == measurement.Zero {
-		p.x.Ind.FirstLineAttr = nil
+		p.CtPPr.Ind.FirstLineAttr = nil
 	} else {
-		p.x.Ind.FirstLineAttr = &sharedTypes.ST_TwipsMeasure{}
-		p.x.Ind.FirstLineAttr.ST_UnsignedDecimalNumber = gooxml.Uint64(uint64(m / measurement.Twips))
+		p.CtPPr.Ind.FirstLineAttr = &sharedTypes.ST_TwipsMeasure{}
+		p.CtPPr.Ind.FirstLineAttr.ST_UnsignedDecimalNumber = gooxml.Uint64(uint64(m / measurement.Twips))
 	}
 }
 
 // SetStartIndent controls the start indentation.
 func (p ParagraphProperties) SetStartIndent(m measurement.Distance) {
-	if p.x.Ind == nil {
-		p.x.Ind = wml.NewCT_Ind()
+	if p.CtPPr.Ind == nil {
+		p.CtPPr.Ind = wml.NewCT_Ind()
 	}
 	if m == measurement.Zero {
-		p.x.Ind.StartAttr = nil
+		p.CtPPr.Ind.StartAttr = nil
 	} else {
-		p.x.Ind.StartAttr = &wml.ST_SignedTwipsMeasure{}
-		p.x.Ind.StartAttr.Int64 = gooxml.Int64(int64(m / measurement.Twips))
+		p.CtPPr.Ind.StartAttr = &wml.ST_SignedTwipsMeasure{}
+		p.CtPPr.Ind.StartAttr.Int64 = gooxml.Int64(int64(m / measurement.Twips))
 	}
 }
 
 // SetEndIndent controls the end indentation.
 func (p ParagraphProperties) SetEndIndent(m measurement.Distance) {
-	if p.x.Ind == nil {
-		p.x.Ind = wml.NewCT_Ind()
+	if p.CtPPr.Ind == nil {
+		p.CtPPr.Ind = wml.NewCT_Ind()
 	}
 	if m == measurement.Zero {
-		p.x.Ind.EndAttr = nil
+		p.CtPPr.Ind.EndAttr = nil
 	} else {
-		p.x.Ind.EndAttr = &wml.ST_SignedTwipsMeasure{}
-		p.x.Ind.EndAttr.Int64 = gooxml.Int64(int64(m / measurement.Twips))
+		p.CtPPr.Ind.EndAttr = &wml.ST_SignedTwipsMeasure{}
+		p.CtPPr.Ind.EndAttr.Int64 = gooxml.Int64(int64(m / measurement.Twips))
 	}
 }
 
 // SetHangingIndent controls the indentation of the non-first lines in a paragraph.
 func (p ParagraphProperties) SetHangingIndent(m measurement.Distance) {
-	if p.x.Ind == nil {
-		p.x.Ind = wml.NewCT_Ind()
+	if p.CtPPr.Ind == nil {
+		p.CtPPr.Ind = wml.NewCT_Ind()
 	}
 	if m == measurement.Zero {
-		p.x.Ind.HangingAttr = nil
+		p.CtPPr.Ind.HangingAttr = nil
 	} else {
-		p.x.Ind.HangingAttr = &sharedTypes.ST_TwipsMeasure{}
-		p.x.Ind.HangingAttr.ST_UnsignedDecimalNumber = gooxml.Uint64(uint64(m / measurement.Twips))
+		p.CtPPr.Ind.HangingAttr = &sharedTypes.ST_TwipsMeasure{}
+		p.CtPPr.Ind.HangingAttr.ST_UnsignedDecimalNumber = gooxml.Uint64(uint64(m / measurement.Twips))
 	}
 }
