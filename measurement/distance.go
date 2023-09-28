@@ -15,6 +15,7 @@ type Distance float64
 const (
 	Zero           Distance = 0
 	Point                   = 1
+	NOFFZZ                  = 914400.0
 	Pixel72                 = 1.0 / 72.0 * Inch
 	Pixel96                 = 1.0 / 96.0 * Inch
 	HalfPoint               = 1.0 / 2.0 * Point
@@ -22,9 +23,10 @@ const (
 	Millimeter              = 2.83465 * Point
 	Centimeter              = 10 * Millimeter
 	Inch                    = 72 * Point
+	Dpi                     = 96 * Point
 	Foot                    = 12 * Inch
 	Twips                   = 1.0 / 20.0 * Point
-	EMU                     = 1.0 / 914400.0 * Inch
+	EMU                     = 1.0 / NOFFZZ * Inch
 	HundredthPoint          = 1 / 100.0
 	Dxa                     = Twips
 )

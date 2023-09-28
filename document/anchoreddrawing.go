@@ -99,8 +99,8 @@ func (a AnchoredDrawing) SetVAlignment(v wml.WdST_AlignV) {
 
 // SetSize sets the size of the displayed image on the page.
 func (a AnchoredDrawing) SetSize(w, h measurement.Distance) {
-	a.x.Extent.CxAttr = int64(float64(w*measurement.Pixel72) / measurement.EMU)
-	a.x.Extent.CyAttr = int64(float64(h*measurement.Pixel72) / measurement.EMU)
+	a.x.Extent.CxAttr = int64(float64(w*measurement.NOFFZZ) / measurement.Dpi)
+	a.x.Extent.CyAttr = int64(float64(h*measurement.NOFFZZ) / measurement.Dpi)
 }
 
 // SetTextWrapNone unsets text wrapping so the image can float on top of the
