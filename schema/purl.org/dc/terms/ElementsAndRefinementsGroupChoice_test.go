@@ -13,7 +13,7 @@ import (
 	"encoding/xml"
 	"testing"
 
-	"github.com/carmel/gooxml/schema/purl.org/dc/terms"
+	"github.com/qifengzhang007/gooxml/schema/purl.org/dc/terms"
 )
 
 func TestElementsAndRefinementsGroupChoiceConstructor(t *testing.T) {

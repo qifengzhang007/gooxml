@@ -13,7 +13,7 @@ import (
 	"encoding/xml"
 	"testing"
 
-	"github.com/carmel/gooxml/schema/soo/ofc/extended_properties"
+	"github.com/qifengzhang007/gooxml/schema/soo/ofc/extended_properties"
 )
 
 func TestCT_VectorLpstrConstructor(t *testing.T) {

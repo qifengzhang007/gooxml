@@ -12,7 +12,7 @@ package format
 import (
 	"io"
 
-	"github.com/carmel/gooxml"
+	"github.com/qifengzhang007/gooxml"
 )
 
 //line lexer.go:20
@@ -56,7 +56,7 @@ func (l *Lexer) Lex(r io.Reader) {
 			eof = pe
 		}
 
-//line lexer.go:64
+		//line lexer.go:64
 		{
 			cs = format_start
 			ts = 0
@@ -64,7 +64,7 @@ func (l *Lexer) Lex(r io.Reader) {
 			act = 0
 		}
 
-//line lexer.go:72
+		//line lexer.go:72
 		{
 			if p == pe {
 				goto _test_eof
@@ -199,7 +199,7 @@ func (l *Lexer) Lex(r io.Reader) {
 			}
 			goto st_out
 		tr0:
-//line NONE:1
+			//line NONE:1
 			switch act {
 			case 2:
 				{
@@ -258,119 +258,119 @@ func (l *Lexer) Lex(r io.Reader) {
 
 			goto st34
 		tr9:
-//line lexer.rl:83
+			//line lexer.rl:83
 			p = (te) - 1
 			{
 				l.fmt.AddToken(FmtTypeFraction, data[ts:te])
 			}
 			goto st34
 		tr19:
-//line lexer.rl:73
+			//line lexer.rl:73
 			p = (te) - 1
 			{
 				l.fmt.AddToken(FmtTypeDigitOpt, nil)
 			}
 			goto st34
 		tr20:
-//line lexer.rl:71
+			//line lexer.rl:71
 			te = p + 1
 			{
 				l.fmt.AddToken(FmtTypeDigitOptThousands, nil)
 			}
 			goto st34
 		tr21:
-//line lexer.rl:78
+			//line lexer.rl:78
 			p = (te) - 1
 			{
 				l.fmt.AddToken(FmtTypePercent, nil)
 			}
 			goto st34
 		tr26:
-//line lexer.rl:85
+			//line lexer.rl:85
 			p = (te) - 1
 			{
 				l.fmt.AddToken(FmtTypeDate, data[ts:te])
 			}
 			goto st34
 		tr28:
-//line lexer.rl:72
+			//line lexer.rl:72
 			p = (te) - 1
 			{
 				l.fmt.AddToken(FmtTypeDigit, nil)
 			}
 			goto st34
 		tr37:
-//line lexer.rl:86
+			//line lexer.rl:86
 			p = (te) - 1
 			{
 				l.fmt.AddToken(FmtTypeTime, data[ts:te])
 			}
 			goto st34
 		tr39:
-//line lexer.rl:92
+			//line lexer.rl:92
 			p = (te) - 1
 			{
 				l.fmt.AddToken(FmtTypeLiteral, data[ts:te])
 			}
 			goto st34
 		tr44:
-//line lexer.rl:82
+			//line lexer.rl:82
 			te = p + 1
 			{
 				l.fmt.isGeneral = true
 			}
 			goto st34
 		tr48:
-//line lexer.rl:92
+			//line lexer.rl:92
 			te = p + 1
 			{
 				l.fmt.AddToken(FmtTypeLiteral, data[ts:te])
 			}
 			goto st34
 		tr51:
-//line lexer.rl:79
+			//line lexer.rl:79
 			te = p + 1
 			{
 				l.fmt.AddToken(FmtTypeDollar, nil)
 			}
 			goto st34
 		tr53:
-//line lexer.rl:77
+			//line lexer.rl:77
 			te = p + 1
 			{
 				l.fmt.AddToken(FmtTypeComma, nil)
 			}
 			goto st34
 		tr54:
-//line lexer.rl:76
+			//line lexer.rl:76
 			te = p + 1
 			{
 				l.fmt.AddToken(FmtTypeDecimal, nil)
 			}
 			goto st34
 		tr57:
-//line lexer.rl:81
+			//line lexer.rl:81
 			te = p + 1
 			{
 				l.nextFmt()
 			}
 			goto st34
 		tr59:
-//line lexer.rl:74
+			//line lexer.rl:74
 			te = p + 1
 			{
 				l.fmt.AddToken(FmtTypeText, nil)
 			}
 			goto st34
 		tr65:
-//line lexer.rl:80
+			//line lexer.rl:80
 			te = p + 1
 			{
 				l.fmt.AddToken(FmtTypeUnderscore, nil)
 			}
 			goto st34
 		tr69:
-//line lexer.rl:92
+			//line lexer.rl:92
 			te = p
 			p--
 			{
@@ -378,7 +378,7 @@ func (l *Lexer) Lex(r io.Reader) {
 			}
 			goto st34
 		tr70:
-//line lexer.rl:93
+			//line lexer.rl:93
 			te = p
 			p--
 			{
@@ -386,7 +386,7 @@ func (l *Lexer) Lex(r io.Reader) {
 			}
 			goto st34
 		tr71:
-//line lexer.rl:73
+			//line lexer.rl:73
 			te = p
 			p--
 			{
@@ -394,7 +394,7 @@ func (l *Lexer) Lex(r io.Reader) {
 			}
 			goto st34
 		tr73:
-//line lexer.rl:83
+			//line lexer.rl:83
 			te = p
 			p--
 			{
@@ -402,7 +402,7 @@ func (l *Lexer) Lex(r io.Reader) {
 			}
 			goto st34
 		tr78:
-//line lexer.rl:78
+			//line lexer.rl:78
 			te = p
 			p--
 			{
@@ -410,7 +410,7 @@ func (l *Lexer) Lex(r io.Reader) {
 			}
 			goto st34
 		tr79:
-//line lexer.rl:85
+			//line lexer.rl:85
 			te = p
 			p--
 			{
@@ -418,7 +418,7 @@ func (l *Lexer) Lex(r io.Reader) {
 			}
 			goto st34
 		tr81:
-//line lexer.rl:72
+			//line lexer.rl:72
 			te = p
 			p--
 			{
@@ -426,7 +426,7 @@ func (l *Lexer) Lex(r io.Reader) {
 			}
 			goto st34
 		tr82:
-//line lexer.rl:86
+			//line lexer.rl:86
 			te = p
 			p--
 			{
@@ -434,38 +434,38 @@ func (l *Lexer) Lex(r io.Reader) {
 			}
 			goto st34
 		tr86:
-//line lexer.rl:75
+			//line lexer.rl:75
 			te = p
 			p--
 			{
 			}
 			goto st34
 		tr87:
-//line lexer.rl:88
+			//line lexer.rl:88
 			te = p + 1
 			{
 				l.fmt.IsExponential = true
 			}
 			goto st34
 		tr90:
-//line lexer.rl:91
+			//line lexer.rl:91
 			te = p + 1
 			{
 				l.fmt.AddToken(FmtTypeLiteral, data[ts+1:te])
 			}
 			goto st34
 		st34:
-//line NONE:1
+			//line NONE:1
 			ts = 0
 
 			if p++; p == pe {
 				goto _test_eof34
 			}
 		st_case_34:
-//line NONE:1
+			//line NONE:1
 			ts = p
 
-//line lexer.go:400
+			//line lexer.go:400
 			switch data[p] {
 			case 34:
 				goto tr49
@@ -519,10 +519,10 @@ func (l *Lexer) Lex(r io.Reader) {
 			}
 			goto tr48
 		tr49:
-//line NONE:1
+			//line NONE:1
 			te = p + 1
 
-//line lexer.rl:92
+			//line lexer.rl:92
 			act = 20
 			goto st35
 		st35:
@@ -530,7 +530,7 @@ func (l *Lexer) Lex(r io.Reader) {
 				goto _test_eof35
 			}
 		st_case_35:
-//line lexer.go:465
+			//line lexer.go:465
 			if data[p] == 34 {
 				goto tr2
 			}
@@ -545,10 +545,10 @@ func (l *Lexer) Lex(r io.Reader) {
 			}
 			goto st0
 		tr2:
-//line NONE:1
+			//line NONE:1
 			te = p + 1
 
-//line lexer.rl:93
+			//line lexer.rl:93
 			act = 21
 			goto st36
 		st36:
@@ -556,16 +556,16 @@ func (l *Lexer) Lex(r io.Reader) {
 				goto _test_eof36
 			}
 		st_case_36:
-//line lexer.go:491
+			//line lexer.go:491
 			if data[p] == 34 {
 				goto st0
 			}
 			goto tr70
 		tr50:
-//line NONE:1
+			//line NONE:1
 			te = p + 1
 
-//line lexer.rl:73
+			//line lexer.rl:73
 			act = 3
 			goto st37
 		st37:
@@ -573,7 +573,7 @@ func (l *Lexer) Lex(r io.Reader) {
 				goto _test_eof37
 			}
 		st_case_37:
-//line lexer.go:508
+			//line lexer.go:508
 			switch data[p] {
 			case 35:
 				goto st1
@@ -627,7 +627,7 @@ func (l *Lexer) Lex(r io.Reader) {
 			}
 			goto tr0
 		tr5:
-//line NONE:1
+			//line NONE:1
 			te = p + 1
 
 			goto st38
@@ -636,7 +636,7 @@ func (l *Lexer) Lex(r io.Reader) {
 				goto _test_eof38
 			}
 		st_case_38:
-//line lexer.go:571
+			//line lexer.go:571
 			switch data[p] {
 			case 35:
 				goto tr5
@@ -676,7 +676,7 @@ func (l *Lexer) Lex(r io.Reader) {
 			}
 			goto tr9
 		tr12:
-//line NONE:1
+			//line NONE:1
 			te = p + 1
 
 			goto st39
@@ -685,7 +685,7 @@ func (l *Lexer) Lex(r io.Reader) {
 				goto _test_eof39
 			}
 		st_case_39:
-//line lexer.go:620
+			//line lexer.go:620
 			if data[p] == 65 {
 				goto st3
 			}
@@ -735,7 +735,7 @@ func (l *Lexer) Lex(r io.Reader) {
 			}
 			goto tr0
 		tr15:
-//line NONE:1
+			//line NONE:1
 			te = p + 1
 
 			goto st40
@@ -744,7 +744,7 @@ func (l *Lexer) Lex(r io.Reader) {
 				goto _test_eof40
 			}
 		st_case_40:
-//line lexer.go:679
+			//line lexer.go:679
 			switch data[p] {
 			case 35:
 				goto tr5
@@ -781,7 +781,7 @@ func (l *Lexer) Lex(r io.Reader) {
 			}
 			goto tr9
 		tr18:
-//line NONE:1
+			//line NONE:1
 			te = p + 1
 
 			goto st41
@@ -790,7 +790,7 @@ func (l *Lexer) Lex(r io.Reader) {
 				goto _test_eof41
 			}
 		st_case_41:
-//line lexer.go:725
+			//line lexer.go:725
 			switch data[p] {
 			case 35:
 				goto tr18
@@ -819,10 +819,10 @@ func (l *Lexer) Lex(r io.Reader) {
 			}
 			goto tr0
 		tr17:
-//line NONE:1
+			//line NONE:1
 			te = p + 1
 
-//line lexer.rl:83
+			//line lexer.rl:83
 			act = 13
 			goto st42
 		st42:
@@ -830,7 +830,7 @@ func (l *Lexer) Lex(r io.Reader) {
 				goto _test_eof42
 			}
 		st_case_42:
-//line lexer.go:765
+			//line lexer.go:765
 			switch data[p] {
 			case 35:
 				goto tr5
@@ -873,7 +873,7 @@ func (l *Lexer) Lex(r io.Reader) {
 			}
 			goto tr9
 		tr77:
-//line NONE:1
+			//line NONE:1
 			te = p + 1
 
 			goto st43
@@ -882,7 +882,7 @@ func (l *Lexer) Lex(r io.Reader) {
 				goto _test_eof43
 			}
 		st_case_43:
-//line lexer.go:817
+			//line lexer.go:817
 			switch data[p] {
 			case 35:
 				goto tr5
@@ -904,7 +904,7 @@ func (l *Lexer) Lex(r io.Reader) {
 			}
 			goto tr73
 		tr7:
-//line NONE:1
+			//line NONE:1
 			te = p + 1
 
 			goto st44
@@ -913,7 +913,7 @@ func (l *Lexer) Lex(r io.Reader) {
 				goto _test_eof44
 			}
 		st_case_44:
-//line lexer.go:848
+			//line lexer.go:848
 			switch data[p] {
 			case 35:
 				goto tr5
@@ -935,7 +935,7 @@ func (l *Lexer) Lex(r io.Reader) {
 			}
 			goto tr73
 		tr8:
-//line NONE:1
+			//line NONE:1
 			te = p + 1
 
 			goto st45
@@ -944,7 +944,7 @@ func (l *Lexer) Lex(r io.Reader) {
 				goto _test_eof45
 			}
 		st_case_45:
-//line lexer.go:879
+			//line lexer.go:879
 			switch data[p] {
 			case 35:
 				goto tr5
@@ -975,10 +975,10 @@ func (l *Lexer) Lex(r io.Reader) {
 			}
 			goto tr19
 		tr52:
-//line NONE:1
+			//line NONE:1
 			te = p + 1
 
-//line lexer.rl:78
+			//line lexer.rl:78
 			act = 8
 			goto st46
 		st46:
@@ -986,7 +986,7 @@ func (l *Lexer) Lex(r io.Reader) {
 				goto _test_eof46
 			}
 		st_case_46:
-//line lexer.go:921
+			//line lexer.go:921
 			switch data[p] {
 			case 35:
 				goto st13
@@ -1066,7 +1066,7 @@ func (l *Lexer) Lex(r io.Reader) {
 			}
 			goto tr21
 		tr27:
-//line NONE:1
+			//line NONE:1
 			te = p + 1
 
 			goto st47
@@ -1075,7 +1075,7 @@ func (l *Lexer) Lex(r io.Reader) {
 				goto _test_eof47
 			}
 		st_case_47:
-//line lexer.go:1010
+			//line lexer.go:1010
 			switch data[p] {
 			case 47:
 				goto tr27
@@ -1097,10 +1097,10 @@ func (l *Lexer) Lex(r io.Reader) {
 			}
 			goto tr26
 		tr55:
-//line NONE:1
+			//line NONE:1
 			te = p + 1
 
-//line lexer.rl:72
+			//line lexer.rl:72
 			act = 2
 			goto st48
 		st48:
@@ -1108,7 +1108,7 @@ func (l *Lexer) Lex(r io.Reader) {
 				goto _test_eof48
 			}
 		st_case_48:
-//line lexer.go:1043
+			//line lexer.go:1043
 			switch data[p] {
 			case 35:
 				goto st1
@@ -1183,10 +1183,10 @@ func (l *Lexer) Lex(r io.Reader) {
 			}
 			goto tr0
 		tr56:
-//line NONE:1
+			//line NONE:1
 			te = p + 1
 
-//line lexer.rl:92
+			//line lexer.rl:92
 			act = 20
 			goto st49
 		st49:
@@ -1194,7 +1194,7 @@ func (l *Lexer) Lex(r io.Reader) {
 				goto _test_eof49
 			}
 		st_case_49:
-//line lexer.go:1129
+			//line lexer.go:1129
 			switch data[p] {
 			case 37:
 				goto st15
@@ -1206,10 +1206,10 @@ func (l *Lexer) Lex(r io.Reader) {
 			}
 			goto tr69
 		tr34:
-//line NONE:1
+			//line NONE:1
 			te = p + 1
 
-//line lexer.rl:86
+			//line lexer.rl:86
 			act = 15
 			goto st50
 		st50:
@@ -1217,7 +1217,7 @@ func (l *Lexer) Lex(r io.Reader) {
 				goto _test_eof50
 			}
 		st_case_50:
-//line lexer.go:1152
+			//line lexer.go:1152
 			switch data[p] {
 			case 58:
 				goto tr34
@@ -1280,10 +1280,10 @@ func (l *Lexer) Lex(r io.Reader) {
 			}
 			goto tr0
 		tr67:
-//line NONE:1
+			//line NONE:1
 			te = p + 1
 
-//line lexer.rl:86
+			//line lexer.rl:86
 			act = 15
 			goto st51
 		st51:
@@ -1291,7 +1291,7 @@ func (l *Lexer) Lex(r io.Reader) {
 				goto _test_eof51
 			}
 		st_case_51:
-//line lexer.go:1226
+			//line lexer.go:1226
 			switch data[p] {
 			case 46:
 				goto st26
@@ -1317,10 +1317,10 @@ func (l *Lexer) Lex(r io.Reader) {
 			}
 			goto tr37
 		tr38:
-//line NONE:1
+			//line NONE:1
 			te = p + 1
 
-//line lexer.rl:86
+			//line lexer.rl:86
 			act = 15
 			goto st52
 		st52:
@@ -1328,7 +1328,7 @@ func (l *Lexer) Lex(r io.Reader) {
 				goto _test_eof52
 			}
 		st_case_52:
-//line lexer.go:1263
+			//line lexer.go:1263
 			switch data[p] {
 			case 48:
 				goto tr85
@@ -1345,10 +1345,10 @@ func (l *Lexer) Lex(r io.Reader) {
 			}
 			goto tr82
 		tr85:
-//line NONE:1
+			//line NONE:1
 			te = p + 1
 
-//line lexer.rl:86
+			//line lexer.rl:86
 			act = 15
 			goto st53
 		st53:
@@ -1356,7 +1356,7 @@ func (l *Lexer) Lex(r io.Reader) {
 				goto _test_eof53
 			}
 		st_case_53:
-//line lexer.go:1291
+			//line lexer.go:1291
 			switch data[p] {
 			case 48:
 				goto tr34
@@ -1373,10 +1373,10 @@ func (l *Lexer) Lex(r io.Reader) {
 			}
 			goto tr82
 		tr58:
-//line NONE:1
+			//line NONE:1
 			te = p + 1
 
-//line lexer.rl:75
+			//line lexer.rl:75
 			act = 5
 			goto st54
 		st54:
@@ -1384,7 +1384,7 @@ func (l *Lexer) Lex(r io.Reader) {
 				goto _test_eof54
 			}
 		st_case_54:
-//line lexer.go:1319
+			//line lexer.go:1319
 			switch data[p] {
 			case 35:
 				goto st1
@@ -1399,10 +1399,10 @@ func (l *Lexer) Lex(r io.Reader) {
 			}
 			goto tr86
 		tr60:
-//line NONE:1
+			//line NONE:1
 			te = p + 1
 
-//line lexer.rl:92
+			//line lexer.rl:92
 			act = 20
 			goto st55
 		st55:
@@ -1410,7 +1410,7 @@ func (l *Lexer) Lex(r io.Reader) {
 				goto _test_eof55
 			}
 		st_case_55:
-//line lexer.go:1345
+			//line lexer.go:1345
 			switch data[p] {
 			case 47:
 				goto st22
@@ -1431,7 +1431,7 @@ func (l *Lexer) Lex(r io.Reader) {
 			}
 			goto tr69
 		tr62:
-//line NONE:1
+			//line NONE:1
 			te = p + 1
 
 			goto st57
@@ -1440,7 +1440,7 @@ func (l *Lexer) Lex(r io.Reader) {
 				goto _test_eof57
 			}
 		st_case_57:
-//line lexer.go:1375
+			//line lexer.go:1375
 			if data[p] == 101 {
 				goto st27
 			}
@@ -1491,10 +1491,10 @@ func (l *Lexer) Lex(r io.Reader) {
 			}
 			goto tr39
 		tr63:
-//line NONE:1
+			//line NONE:1
 			te = p + 1
 
-//line lexer.rl:92
+			//line lexer.rl:92
 			act = 20
 			goto st58
 		st58:
@@ -1502,7 +1502,7 @@ func (l *Lexer) Lex(r io.Reader) {
 				goto _test_eof58
 			}
 		st_case_58:
-//line lexer.go:1437
+			//line lexer.go:1437
 			switch data[p] {
 			case 104:
 				goto st33
@@ -1522,17 +1522,17 @@ func (l *Lexer) Lex(r io.Reader) {
 			}
 			goto st32
 		tr46:
-//line NONE:1
+			//line NONE:1
 			te = p + 1
 
-//line lexer.rl:89
+			//line lexer.rl:89
 			act = 18
 			goto st59
 		tr47:
-//line NONE:1
+			//line NONE:1
 			te = p + 1
 
-//line lexer.rl:87
+			//line lexer.rl:87
 			act = 16
 			goto st59
 		st59:
@@ -1540,7 +1540,7 @@ func (l *Lexer) Lex(r io.Reader) {
 				goto _test_eof59
 			}
 		st_case_59:
-//line lexer.go:1475
+			//line lexer.go:1475
 			if data[p] == 93 {
 				goto tr46
 			}
@@ -1561,10 +1561,10 @@ func (l *Lexer) Lex(r io.Reader) {
 		st_case_60:
 			goto tr90
 		tr66:
-//line NONE:1
+			//line NONE:1
 			te = p + 1
 
-//line lexer.rl:85
+			//line lexer.rl:85
 			act = 14
 			goto st61
 		st61:
@@ -1572,7 +1572,7 @@ func (l *Lexer) Lex(r io.Reader) {
 				goto _test_eof61
 			}
 		st_case_61:
-//line lexer.go:1507
+			//line lexer.go:1507
 			switch data[p] {
 			case 47:
 				goto tr27
@@ -1926,7 +1926,7 @@ func (l *Lexer) Lex(r io.Reader) {
 
 		}
 
-//line lexer.rl:134
+		//line lexer.rl:134
 		if ts > 0 {
 			// currently parsing a token, so shift it to the
 			// beginning of the buffer

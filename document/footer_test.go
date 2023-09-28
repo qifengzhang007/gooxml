@@ -10,7 +10,7 @@ package document_test
 import (
 	"testing"
 
-	"github.com/carmel/gooxml/document"
+	"github.com/qifengzhang007/gooxml/document"
 )
 
 func TestFooterRemoveParagraph(t *testing.T) {

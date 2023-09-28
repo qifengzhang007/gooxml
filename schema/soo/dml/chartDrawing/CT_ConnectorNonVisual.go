@@ -12,8 +12,8 @@ package chartDrawing
 import (
 	"encoding/xml"
 
-	"github.com/carmel/gooxml"
-	"github.com/carmel/gooxml/schema/soo/dml"
+	"github.com/qifengzhang007/gooxml"
+	"github.com/qifengzhang007/gooxml/schema/soo/dml"
 )
 
 type CT_ConnectorNonVisual struct {

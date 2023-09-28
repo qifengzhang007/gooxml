@@ -13,7 +13,7 @@ import (
 	"encoding/xml"
 	"testing"
 
-	"github.com/carmel/gooxml/schema/soo/dml/diagram"
+	"github.com/qifengzhang007/gooxml/schema/soo/dml/diagram"
 )
 
 func TestCT_LayoutNodeConstructor(t *testing.T) {

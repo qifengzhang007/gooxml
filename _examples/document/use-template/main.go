@@ -9,7 +9,7 @@ import (
 	"github.com/carmel/gooxml/schema/soo/wml"
 	"log"
 
-	"github.com/carmel/gooxml/document"
+	"github.com/qifengzhang007/gooxml/document"
 )
 
 var lorem = `

@@ -10,15 +10,15 @@ package document
 import (
 	"fmt"
 
-	"github.com/carmel/gooxml"
-	"github.com/carmel/gooxml/measurement"
-	"github.com/carmel/gooxml/schema/soo/ofc/sharedTypes"
-	"github.com/carmel/gooxml/schema/soo/wml"
+	"github.com/qifengzhang007/gooxml"
+	"github.com/qifengzhang007/gooxml/measurement"
+	"github.com/qifengzhang007/gooxml/schema/soo/ofc/sharedTypes"
+	"github.com/qifengzhang007/gooxml/schema/soo/wml"
 )
 
 // ParagraphProperties are the properties for a paragraph.
 type ParagraphProperties struct {
-	d *Document
+	D *Document
 	x *wml.CT_PPr
 }
 
@@ -95,7 +95,7 @@ func (p ParagraphProperties) AddSection(t wml.ST_SectionMark) Section {
 		p.x.SectPr.Type = wml.NewCT_SectType()
 		p.x.SectPr.Type.ValAttr = t
 	}
-	return Section{p.d, p.x.SectPr}
+	return Section{p.D, p.x.SectPr}
 }
 
 // SetHeadingLevel sets a heading level and style based on the level to a

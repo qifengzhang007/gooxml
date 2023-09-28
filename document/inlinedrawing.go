@@ -8,10 +8,10 @@
 package document
 
 import (
-	"github.com/carmel/gooxml/common"
-	"github.com/carmel/gooxml/measurement"
-	pic "github.com/carmel/gooxml/schema/soo/dml/picture"
-	"github.com/carmel/gooxml/schema/soo/wml"
+	"github.com/qifengzhang007/gooxml/common"
+	"github.com/qifengzhang007/gooxml/measurement"
+	pic "github.com/qifengzhang007/gooxml/schema/soo/dml/picture"
+	"github.com/qifengzhang007/gooxml/schema/soo/wml"
 )
 
 // InlineDrawing is an inlined image within a run.
@@ -40,7 +40,9 @@ func (i InlineDrawing) GetImage() (common.ImageRef, bool) {
 }
 
 // SetSize sets the size of the displayed image on the page.
+// When setting the image size, please set the size in pixels,
+// the program will automatically calculate the unit to meet the ooxml regulations.
 func (i InlineDrawing) SetSize(w, h measurement.Distance) {
-	i.x.Extent.CxAttr = int64(float64(w*measurement.Pixel72) / measurement.EMU)
-	i.x.Extent.CyAttr = int64(float64(h*measurement.Pixel72) / measurement.EMU)
+	i.x.Extent.CxAttr = int64(float64(w*measurement.NOFFZZ) / measurement.Dpi)
+	i.x.Extent.CyAttr = int64(float64(h*measurement.NOFFZZ) / measurement.Dpi)
 }

@@ -8,11 +8,11 @@
 package document
 
 import (
-	"github.com/carmel/gooxml"
-	"github.com/carmel/gooxml/common"
-	"github.com/carmel/gooxml/measurement"
-	pic "github.com/carmel/gooxml/schema/soo/dml/picture"
-	"github.com/carmel/gooxml/schema/soo/wml"
+	"github.com/qifengzhang007/gooxml"
+	"github.com/qifengzhang007/gooxml/common"
+	"github.com/qifengzhang007/gooxml/measurement"
+	pic "github.com/qifengzhang007/gooxml/schema/soo/dml/picture"
+	"github.com/qifengzhang007/gooxml/schema/soo/wml"
 )
 
 // AnchoredDrawing is an absolutely positioned image within a document page.
@@ -99,8 +99,8 @@ func (a AnchoredDrawing) SetVAlignment(v wml.WdST_AlignV) {
 
 // SetSize sets the size of the displayed image on the page.
 func (a AnchoredDrawing) SetSize(w, h measurement.Distance) {
-	a.x.Extent.CxAttr = int64(float64(w*measurement.Pixel72) / measurement.EMU)
-	a.x.Extent.CyAttr = int64(float64(h*measurement.Pixel72) / measurement.EMU)
+	a.x.Extent.CxAttr = int64(float64(w*measurement.NOFFZZ) / measurement.Dpi)
+	a.x.Extent.CyAttr = int64(float64(h*measurement.NOFFZZ) / measurement.Dpi)
 }
 
 // SetTextWrapNone unsets text wrapping so the image can float on top of the

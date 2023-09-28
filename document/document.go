@@ -19,14 +19,14 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/carmel/gooxml"
-	"github.com/carmel/gooxml/common"
-	"github.com/carmel/gooxml/zippkg"
+	"github.com/qifengzhang007/gooxml"
+	"github.com/qifengzhang007/gooxml/common"
+	"github.com/qifengzhang007/gooxml/zippkg"
 
-	"github.com/carmel/gooxml/schema/soo/dml"
-	st "github.com/carmel/gooxml/schema/soo/ofc/sharedTypes"
-	"github.com/carmel/gooxml/schema/soo/pkg/relationships"
-	"github.com/carmel/gooxml/schema/soo/wml"
+	"github.com/qifengzhang007/gooxml/schema/soo/dml"
+	st "github.com/qifengzhang007/gooxml/schema/soo/ofc/sharedTypes"
+	"github.com/qifengzhang007/gooxml/schema/soo/pkg/relationships"
+	"github.com/qifengzhang007/gooxml/schema/soo/wml"
 )
 
 // Document is a text document that can be written out in the OOXML .docx

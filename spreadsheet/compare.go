@@ -10,10 +10,11 @@ package spreadsheet
 import (
 	"strconv"
 
-	"github.com/carmel/gooxml/spreadsheet/reference"
+	"github.com/qifengzhang007/gooxml/spreadsheet/reference"
 )
 
 // SortOrder is a column sort order.
+//
 //go:generate stringer -type=SortOrder
 type SortOrder byte
 

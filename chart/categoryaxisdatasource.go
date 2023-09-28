@@ -8,7 +8,7 @@
 package chart
 
 import (
-	crt "github.com/carmel/gooxml/schema/soo/dml/chart"
+	crt "github.com/qifengzhang007/gooxml/schema/soo/dml/chart"
 )
 
 // CategoryAxisDataSource specifies the data for an axis.  It's commonly used with

@@ -12,18 +12,18 @@ import (
 	"errors"
 	"math/rand"
 
-	"github.com/carmel/gooxml"
-	"github.com/carmel/gooxml/common"
-	"github.com/carmel/gooxml/measurement"
-	"github.com/carmel/gooxml/schema/soo/dml"
-	pic "github.com/carmel/gooxml/schema/soo/dml/picture"
-	"github.com/carmel/gooxml/schema/soo/ofc/sharedTypes"
-	"github.com/carmel/gooxml/schema/soo/wml"
+	"github.com/qifengzhang007/gooxml"
+	"github.com/qifengzhang007/gooxml/common"
+	"github.com/qifengzhang007/gooxml/measurement"
+	"github.com/qifengzhang007/gooxml/schema/soo/dml"
+	pic "github.com/qifengzhang007/gooxml/schema/soo/dml/picture"
+	"github.com/qifengzhang007/gooxml/schema/soo/ofc/sharedTypes"
+	"github.com/qifengzhang007/gooxml/schema/soo/wml"
 )
 
 // Run is a run of text within a paragraph that shares the same formatting.
 type Run struct {
-	d *Document
+	D *Document
 	x *wml.CT_R
 }
 
@@ -141,7 +141,7 @@ func (r Run) DrawingAnchored() []AnchoredDrawing {
 			continue
 		}
 		for _, anc := range ic.Drawing.Anchor {
-			ret = append(ret, AnchoredDrawing{r.d, anc})
+			ret = append(ret, AnchoredDrawing{r.D, anc})
 		}
 	}
 	return ret
@@ -153,7 +153,7 @@ func (r Run) AddDrawingAnchored(img common.ImageRef) (AnchoredDrawing, error) {
 	ic.Drawing = wml.NewCT_Drawing()
 	anchor := wml.NewWdAnchor()
 
-	ad := AnchoredDrawing{r.d, anchor}
+	ad := AnchoredDrawing{r.D, anchor}
 
 	// required by Word on OSX for the file to open
 	anchor.SimplePosAttr = gooxml.Bool(false)
@@ -224,7 +224,7 @@ func (r Run) AddDrawingInline(img common.ImageRef) (InlineDrawing, error) {
 	ic.Drawing = wml.NewCT_Drawing()
 
 	inl := wml.NewWdInline()
-	inline := InlineDrawing{r.d, inl}
+	inline := InlineDrawing{r.D, inl}
 
 	// required by Word on OSX for the file to open
 	//anchor.SimplePosAttr = gooxml.Bool(false)

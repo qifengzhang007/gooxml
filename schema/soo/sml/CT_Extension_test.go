@@ -13,7 +13,7 @@ import (
 	"encoding/xml"
 	"testing"
 
-	"github.com/carmel/gooxml/schema/soo/sml"
+	"github.com/qifengzhang007/gooxml/schema/soo/sml"
 )
 
 func TestCT_ExtensionConstructor(t *testing.T) {

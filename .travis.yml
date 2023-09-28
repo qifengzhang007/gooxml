@@ -7,7 +7,7 @@ go:
 
 install:
         - mkdir -p $HOME/gopath/src/baliance.com/
-        - ln -s $HOME/gopath/src/github.com/carmel/gooxml $HOME/gopath/src/baliance.com/gooxml
+        - ln -s $HOME/gopath/src/github.com/qifengzhang007/gooxml $HOME/gopath/src/baliance.com/gooxml
 
 script:
         - cd $HOME/gopath/src/baliance.com/gooxml

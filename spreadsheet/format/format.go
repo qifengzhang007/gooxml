@@ -14,7 +14,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/carmel/gooxml"
+	"github.com/qifengzhang007/gooxml"
 )
 
 // constants used when formatting generic values to determine when to start
@@ -41,6 +41,7 @@ type Format struct {
 }
 
 // FmtType is the type of a format token.
+//
 //go:generate stringer -type=FmtType
 type FmtType byte
 

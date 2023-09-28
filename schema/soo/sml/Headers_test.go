@@ -13,7 +13,7 @@ import (
 	"encoding/xml"
 	"testing"
 
-	"github.com/carmel/gooxml/schema/soo/sml"
+	"github.com/qifengzhang007/gooxml/schema/soo/sml"
 )
 
 func TestHeadersConstructor(t *testing.T) {
