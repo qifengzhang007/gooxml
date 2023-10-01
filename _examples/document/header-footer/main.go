@@ -35,7 +35,7 @@ func main() {
 	run.AddText("文档标题")
 
 	imgInl, _ := para.AddRun().AddDrawingInline(iref)
-	imgInl.SetSize(1*measurement.Inch, 1*measurement.Inch)
+	imgInl.SetSize(1*measurement.Inch, 1*measurement.Inch, 1)
 
 	// Headers and footers are not immediately associated with a document as a
 	// document can have multiple headers and footers for different sections.

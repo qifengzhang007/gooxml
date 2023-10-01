@@ -42,7 +42,11 @@ func (i InlineDrawing) GetImage() (common.ImageRef, bool) {
 // SetSize sets the size of the displayed image on the page.
 // When setting the image size, please set the size in pixels,
 // the program will automatically calculate the unit to meet the ooxml regulations.
-func (i InlineDrawing) SetSize(w, h measurement.Distance) {
-	i.x.Extent.CxAttr = int64(float64(w*measurement.NOFFZZ) / measurement.Ppi)
-	i.x.Extent.CyAttr = int64(float64(h*measurement.NOFFZZ) / measurement.Ppi)
+// width  = image width
+// height   = image height
+// zoom  = image zoom ,When a picture is inserted into the word,
+// if it is displayed, it is enlarged by 2 times, then when setting the size you can set the zoom to 1/2 (0.5) to correct the picture ratio.
+func (i InlineDrawing) SetSize(width, height, zoom measurement.Distance) {
+	i.x.Extent.CxAttr = int64(float64(zoom*width*measurement.NOFFZZ) / measurement.Ppi)
+	i.x.Extent.CyAttr = int64(float64(zoom*height*measurement.NOFFZZ) / measurement.Ppi)
 }

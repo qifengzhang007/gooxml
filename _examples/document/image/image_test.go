@@ -4,6 +4,7 @@ package main
 import (
 	"io/ioutil"
 	"log"
+	"testing"
 
 	"github.com/qifengzhang007/gooxml/common"
 	"github.com/qifengzhang007/gooxml/document"
@@ -14,7 +15,7 @@ import (
 
 var lorem = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lobortis, lectus dictum feugiat tempus, sem neque finibus enim, sed eleifend sem nunc ac diam. Vestibulum tempus sagittis elementum`
 
-func main() {
+func TestImages1(t *testing.T) {
 	doc := document.New()
 
 	img1, err := common.ImageFromFile("gophercolor.png")
@@ -61,14 +62,14 @@ func main() {
 			if err != nil {
 				log.Fatalf("unable to add inline image: %s", err)
 			}
-			inl.SetSize(1*measurement.Inch, 1*measurement.Inch)
+			inl.SetSize(1*measurement.Inch, 1*measurement.Inch, 1)
 		}
 		if i == 15 {
 			inl, err := run.AddDrawingInline(img2ref)
 			if err != nil {
 				log.Fatalf("unable to add inline image: %s", err)
 			}
-			inl.SetSize(1*measurement.Inch, 1*measurement.Inch)
+			inl.SetSize(1*measurement.Inch, 1*measurement.Inch, 1)
 		}
 	}
 	doc.SaveToFile("image.docx")
