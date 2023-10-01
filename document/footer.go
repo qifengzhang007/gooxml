@@ -88,7 +88,7 @@ func (f Footer) AddImage(i common.Image) (common.ImageRef, error) {
 		}
 	}
 
-	r := common.MakeImageRef(i, &f.d.DocBase, ftrRels)
+	r := common.MakeImageRef(i, &f.d.DocBase, ftrRels, nil)
 	if i.Data == nil && i.Path == "" {
 		return r, errors.New("image must have data or a path")
 	}

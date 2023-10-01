@@ -23,7 +23,7 @@ const (
 	Millimeter              = 2.83465 * Point
 	Centimeter              = 10 * Millimeter
 	Inch                    = 72 * Point
-	Dpi                     = 96 * Point
+	Ppi                     = 96 * Point
 	Foot                    = 12 * Inch
 	Twips                   = 1.0 / 20.0 * Point
 	EMU                     = 1.0 / NOFFZZ * Inch

@@ -88,7 +88,7 @@ func (h Header) AddImage(i common.Image) (common.ImageRef, error) {
 		}
 	}
 
-	r := common.MakeImageRef(i, &h.d.DocBase, hdrRels)
+	r := common.MakeImageRef(i, &h.d.DocBase, hdrRels, nil)
 	if i.Data == nil && i.Path == "" {
 		return r, errors.New("image must have data or a path")
 	}

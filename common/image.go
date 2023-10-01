@@ -10,6 +10,7 @@ package common
 import (
 	"bytes"
 	"fmt"
+	"github.com/qifengzhang007/gooxml/schema/soo/pkg/relationships"
 	"image"
 	"os"
 
@@ -41,8 +42,11 @@ type ImageRef struct {
 // MakeImageRef constructs an image reference which is a reference to a
 // particular image file inside a document.  The same image can be used multiple
 // times in a document by re-use the ImageRef.
-func MakeImageRef(img Image, d *DocBase, rels Relationships) ImageRef {
-	return ImageRef{img: img, d: d, rels: rels}
+func MakeImageRef(img Image, d *DocBase, docRels Relationships, rel *relationships.Relationship) ImageRef {
+	if rel != nil {
+		return ImageRef{img: img, d: d, rels: docRels, relID: rel.IdAttr}
+	}
+	return ImageRef{img: img, d: d, rels: docRels, relID: ""}
 }
 
 func (i *ImageRef) SetRelID(id string) {

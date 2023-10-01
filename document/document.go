@@ -74,6 +74,7 @@ func New() *Document {
 	d.Rels = common.NewRelationships()
 	d.Rels.AddRelationship(gooxml.RelativeFilename(gooxml.DocTypeDocument, "", gooxml.CorePropertiesType, 0), gooxml.CorePropertiesType)
 	d.Rels.AddRelationship("docProps/app.xml", gooxml.ExtendedPropertiesType)
+	d.Rels.AddRelationship("docProps/custom.xml", gooxml.CustomPropertiesType)
 	d.Rels.AddRelationship("word/document.xml", gooxml.OfficeDocumentType)
 
 	d.Numbering = NewNumbering()
@@ -496,7 +497,6 @@ func Read(r io.ReaderAt, size int64) (*Document, error) {
 		return nil, err
 	}
 	doc.TmpPath = td
-
 	zr, err := zip.NewReader(r, size)
 	if err != nil {
 		return nil, fmt.Errorf("parsing zip: %s", err)
@@ -593,7 +593,7 @@ func (d *Document) validateTableCells() error {
 // AddImage adds an image to the document package, returning a reference that
 // can be used to add the image to a run and place it in the document contents.
 func (d *Document) AddImage(i common.Image) (common.ImageRef, error) {
-	r := common.MakeImageRef(i, &d.DocBase, d.docRels)
+	r := common.MakeImageRef(i, &d.DocBase, d.docRels, nil)
 	if i.Data == nil && i.Path == "" {
 		return r, errors.New("image must have data or a path")
 	}
@@ -795,7 +795,7 @@ func (d *Document) onNewRelationship(decMap *zippkg.DecodeMap, target, typ strin
 				if err != nil {
 					return err
 				}
-				iref = common.MakeImageRef(img, &d.DocBase, d.docRels)
+				iref = common.MakeImageRef(img, &d.DocBase, d.docRels, rel)
 				d.Images = append(d.Images, iref)
 				files[i] = nil
 			}
@@ -807,6 +807,8 @@ func (d *Document) onNewRelationship(decMap *zippkg.DecodeMap, target, typ strin
 		if newExt := filepath.Ext(rel.TargetAttr); newExt != ext {
 			rel.TargetAttr = rel.TargetAttr[0:len(rel.TargetAttr)-len(newExt)] + ext
 		}
+	case gooxml.CustomProperties:
+		// The xml custom attribute corresponds to a different function, the attribute name can not be determined, the program does not need to deal with .
 
 	default:
 		gooxml.Log("unsupported relationship type: %s tgt: %s", typ, target)
@@ -937,4 +939,13 @@ func (d Document) Bookmarks() []Bookmark {
 		}
 	}
 	return ret
+}
+
+// GetWordRelationships
+// Get the Relationship node associated with a Word document
+func (d Document) GetWordRelationships() (relationships []relationships.CT_Relationship) {
+	for _, item := range d.docRels.X().CT_Relationships.Relationship {
+		relationships = append(relationships, item.CT_Relationship)
+	}
+	return
 }

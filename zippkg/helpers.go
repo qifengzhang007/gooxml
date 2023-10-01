@@ -13,7 +13,6 @@ import (
 	"encoding/xml"
 	"fmt"
 	"io"
-	"io/ioutil"
 	"os"
 	"sort"
 	"strings"
@@ -84,7 +83,7 @@ func AddFileFromBytes(z *zip.Writer, zipPath string, data []byte) error {
 // ExtractToDiskTmp extracts a zip file to a temporary file in a given path,
 // returning the name of the file.
 func ExtractToDiskTmp(f *zip.File, path string) (string, error) {
-	tmpFile, err := ioutil.TempFile(path, "zz")
+	tmpFile, err := os.CreateTemp(path, "zz")
 	if err != nil {
 		return "", err
 	}

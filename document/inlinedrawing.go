@@ -43,6 +43,6 @@ func (i InlineDrawing) GetImage() (common.ImageRef, bool) {
 // When setting the image size, please set the size in pixels,
 // the program will automatically calculate the unit to meet the ooxml regulations.
 func (i InlineDrawing) SetSize(w, h measurement.Distance) {
-	i.x.Extent.CxAttr = int64(float64(w*measurement.NOFFZZ) / measurement.Dpi)
-	i.x.Extent.CyAttr = int64(float64(h*measurement.NOFFZZ) / measurement.Dpi)
+	i.x.Extent.CxAttr = int64(float64(w*measurement.NOFFZZ) / measurement.Ppi)
+	i.x.Extent.CyAttr = int64(float64(h*measurement.NOFFZZ) / measurement.Ppi)
 }

@@ -281,3 +281,32 @@ func (r Run) AddDrawingInline(img common.ImageRef) (InlineDrawing, error) {
 
 	return inline, nil
 }
+
+// CurRunIsContainerPic  Determine if the current run is an image node Drawing
+func (r Run) CurRunIsContainerPic() bool {
+	for _, contentItem := range r.x.EG_RunInnerContent {
+		if contentItem.Drawing != nil {
+			for _, inlineIten := range contentItem.Drawing.Inline {
+				if inlineIten.Graphic != nil {
+					return true
+				}
+			}
+		}
+	}
+	return false
+}
+
+// GetPicInfo Get all the image information inside a paragraph
+// Note: The call to get the relevant image can only be made if there is an image underneath the run of the paragraph.
+func (r Run) GetPicInfo() (pics []pic.Pic) {
+	for _, contentItem := range r.x.EG_RunInnerContent {
+		for _, inlineItem := range contentItem.Drawing.Inline {
+			for _, anyItem := range inlineItem.Graphic.CT_GraphicalObject.GraphicData.Any {
+				if pic, ok := anyItem.(*pic.Pic); ok {
+					pics = append(pics, *pic)
+				}
+			}
+		}
+	}
+	return
+}
