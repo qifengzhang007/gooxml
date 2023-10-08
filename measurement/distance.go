@@ -33,4 +33,6 @@ const (
 	// Indent setting
 	LeftAndRightIndent      = 210
 	LeftAndRightIndentChars = 100
+	//doc  default max width
+	DocDefaultWidth = 552.0
 )

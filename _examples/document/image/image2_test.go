@@ -45,7 +45,7 @@ func TestImages2(t *testing.T) {
 	tmpP.AddRun().AddBreak()
 	imgRef, _ := doc.GetImageByRelID("rId4")
 	inDraw, _ := tmpP.AddRun().AddDrawingInline(imgRef)
-	inDraw.SetSize(measurement.Distance(imgRef.Size().X), measurement.Distance(imgRef.Size().Y)*measurement.Point, 0.5)
+	inDraw.SetSize(measurement.Distance(imgRef.Size().X), measurement.Distance(imgRef.Size().Y), true)
 	tmpP.AddRun().AddBreak()
 
 	doc.SaveToFile("image2-test.docx")

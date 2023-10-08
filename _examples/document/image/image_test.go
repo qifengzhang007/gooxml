@@ -62,14 +62,14 @@ func TestImages1(t *testing.T) {
 			if err != nil {
 				log.Fatalf("unable to add inline image: %s", err)
 			}
-			inl.SetSize(1*measurement.Inch, 1*measurement.Inch, 1)
+			inl.SetSize(1*measurement.Inch, 1*measurement.Inch, true)
 		}
 		if i == 15 {
 			inl, err := run.AddDrawingInline(img2ref)
 			if err != nil {
 				log.Fatalf("unable to add inline image: %s", err)
 			}
-			inl.SetSize(1*measurement.Inch, 1*measurement.Inch, 1)
+			inl.SetSize(1*measurement.Inch, 1*measurement.Inch, true)
 		}
 	}
 	doc.SaveToFile("image.docx")

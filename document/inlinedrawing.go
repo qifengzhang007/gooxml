@@ -44,9 +44,16 @@ func (i InlineDrawing) GetImage() (common.ImageRef, bool) {
 // the program will automatically calculate the unit to meet the ooxml regulations.
 // width  = image width
 // height   = image height
-// zoom  = image zoom ,When a picture is inserted into the word,
-// if it is displayed, it is enlarged by 2 times, then when setting the size you can set the zoom to 1/2 (0.5) to correct the picture ratio.
-func (i InlineDrawing) SetSize(width, height, zoom measurement.Distance) {
-	i.x.Extent.CxAttr = int64(float64(zoom*width*measurement.NOFFZZ) / measurement.Ppi)
-	i.x.Extent.CyAttr = int64(float64(zoom*height*measurement.NOFFZZ) / measurement.Ppi)
+// isZoom  when isZoom=true, we auto  calc image  width
+func (i InlineDrawing) SetSize(width, height measurement.Distance, isZoom bool) {
+	var zoomScale float64 = 1
+	if isZoom && width > 0 && height > 0 {
+		zoomScale = measurement.DocDefaultWidth / float64(width)
+		if zoomScale > 1 {
+			zoomScale = 1
+		}
+	}
+	i.x.Extent.CxAttr = int64(float64(measurement.Distance(zoomScale)*width*measurement.NOFFZZ) / measurement.Ppi)
+	i.x.Extent.CyAttr = int64(float64(measurement.Distance(zoomScale)*height*measurement.NOFFZZ) / measurement.Ppi)
+
 }
