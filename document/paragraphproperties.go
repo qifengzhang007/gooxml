@@ -149,53 +149,73 @@ func (p ParagraphProperties) SetWindowControl(b bool) {
 }
 
 // SetFirstLineIndent controls the indentation of the first line in a paragraph.
+// Special Note:
+// Regarding paragraph alignment, all adjustments are made based on characters. Therefore, when developers set the alignment, if the parameter is 2, it means a distance of 2 characters for alignment.
+// Do not use any other units, otherwise, the calculated result will not achieve the desired outcome you expect.
 func (p ParagraphProperties) SetFirstLineIndent(m measurement.Distance) {
 	if p.x.Ind == nil {
 		p.x.Ind = wml.NewCT_Ind()
 	}
 	if m == measurement.Zero {
 		p.x.Ind.FirstLineAttr = nil
+		p.x.Ind.FirstLineCharsAttr = nil
 	} else {
 		p.x.Ind.FirstLineAttr = &sharedTypes.ST_TwipsMeasure{}
-		p.x.Ind.FirstLineAttr.ST_UnsignedDecimalNumber = gooxml.Uint64(uint64(m / measurement.Twips))
+		p.x.Ind.FirstLineAttr.ST_UnsignedDecimalNumber = gooxml.Uint64(uint64(m * measurement.LeftAndRightIndent))
+		p.x.Ind.FirstLineCharsAttr = gooxml.Int64(int64(m * measurement.LeftAndRightIndentChars))
 	}
 }
 
 // SetStartIndent controls the start indentation.
+// Special Note:
+// Regarding paragraph alignment, all adjustments are made based on characters. Therefore, when developers set the alignment, if the parameter is 2, it means a distance of 2 characters for alignment.
+// Do not use any other units, otherwise, the calculated result will not achieve the desired outcome you expect.
 func (p ParagraphProperties) SetStartIndent(m measurement.Distance) {
 	if p.x.Ind == nil {
 		p.x.Ind = wml.NewCT_Ind()
 	}
 	if m == measurement.Zero {
 		p.x.Ind.StartAttr = nil
+		p.x.Ind.StartCharsAttr = nil
 	} else {
 		p.x.Ind.StartAttr = &wml.ST_SignedTwipsMeasure{}
-		p.x.Ind.StartAttr.Int64 = gooxml.Int64(int64(m / measurement.Twips))
+		p.x.Ind.StartAttr.Int64 = gooxml.Int64(int64(m * measurement.LeftAndRightIndent))
+		p.x.Ind.StartCharsAttr = gooxml.Int64(int64(m * measurement.LeftAndRightIndentChars))
 	}
 }
 
 // SetEndIndent controls the end indentation.
+// Special Note:
+// Regarding paragraph alignment, all adjustments are made based on characters. Therefore, when developers set the alignment, if the parameter is 2, it means a distance of 2 characters for alignment.
+// Do not use any other units, otherwise, the calculated result will not achieve the desired outcome you expect.
 func (p ParagraphProperties) SetEndIndent(m measurement.Distance) {
 	if p.x.Ind == nil {
 		p.x.Ind = wml.NewCT_Ind()
 	}
 	if m == measurement.Zero {
 		p.x.Ind.EndAttr = nil
+		p.x.Ind.EndCharsAttr = nil
 	} else {
 		p.x.Ind.EndAttr = &wml.ST_SignedTwipsMeasure{}
-		p.x.Ind.EndAttr.Int64 = gooxml.Int64(int64(m / measurement.Twips))
+		p.x.Ind.EndAttr.Int64 = gooxml.Int64(int64(m * measurement.LeftAndRightIndent))
+		p.x.Ind.EndCharsAttr = gooxml.Int64(int64(m * measurement.LeftAndRightIndentChars))
 	}
 }
 
 // SetHangingIndent controls the indentation of the non-first lines in a paragraph.
+// Special Note:
+// Regarding paragraph alignment, all adjustments are made based on characters. Therefore, when developers set the alignment, if the parameter is 2, it means a distance of 2 characters for alignment.
+// Do not use any other units, otherwise, the calculated result will not achieve the desired outcome you expect.
 func (p ParagraphProperties) SetHangingIndent(m measurement.Distance) {
 	if p.x.Ind == nil {
 		p.x.Ind = wml.NewCT_Ind()
 	}
 	if m == measurement.Zero {
 		p.x.Ind.HangingAttr = nil
+		p.x.Ind.HangingCharsAttr = nil
 	} else {
 		p.x.Ind.HangingAttr = &sharedTypes.ST_TwipsMeasure{}
-		p.x.Ind.HangingAttr.ST_UnsignedDecimalNumber = gooxml.Uint64(uint64(m / measurement.Twips))
+		p.x.Ind.HangingAttr.ST_UnsignedDecimalNumber = gooxml.Uint64(uint64(m * measurement.LeftAndRightIndent))
+		p.x.Ind.HangingCharsAttr = gooxml.Int64(int64(m * measurement.LeftAndRightIndentChars))
 	}
 }

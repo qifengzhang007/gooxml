@@ -29,4 +29,8 @@ const (
 	EMU                     = 1.0 / NOFFZZ * Inch
 	HundredthPoint          = 1 / 100.0
 	Dxa                     = Twips
+
+	// Indent setting
+	LeftAndRightIndent      = 210
+	LeftAndRightIndentChars = 100
 )
