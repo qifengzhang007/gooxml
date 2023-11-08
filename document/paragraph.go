@@ -244,3 +244,42 @@ func (p Paragraph) SetNumberingDefinitionByID(abstractNumberID int64) {
 	lvl.ValAttr = int64(abstractNumberID)
 	p.x.PPr.NumPr.NumId = lvl
 }
+
+// JudgeParagraphType  judge current Paragraph type
+func (p Paragraph) JudgeParagraphType(paragraph Paragraph) (pType ParagraphType) {
+
+	if p.GetAllParagraphText(paragraph) != "" {
+		pType++
+	}
+
+	var hasPic int
+	for _, r := range p.Runs() {
+		if len(r.X().EG_RunInnerContent) > 0 && r.X().EG_RunInnerContent[0].Drawing != nil {
+			hasPic++
+			break
+		}
+	}
+
+	if pType == 1 && hasPic == 0 {
+		// 有文本 + 没有图片
+		// has  txt  + no  pic
+		pType = PTypeText
+	} else if pType == 0 && hasPic == 1 {
+		// 没有文本 + 有图片
+		// no  txt  + has  pic
+		pType = PTypeImage
+	} else if pType == 1 && hasPic == 1 {
+		// 有文本 + 有图片
+		// has txt  + has  pic
+		pType = PTypeTextImage
+	}
+	return pType
+}
+
+// GetAllParagraphText
+func (p Paragraph) GetAllParagraphText(paragraph Paragraph) (text string) {
+	for _, item := range paragraph.Runs() {
+		text += item.Text()
+	}
+	return
+}
