@@ -287,8 +287,10 @@ func (r Run) CurRunIsContainerPic() bool {
 	for _, contentItem := range r.x.EG_RunInnerContent {
 		if contentItem.Drawing != nil {
 			for _, inlineIten := range contentItem.Drawing.Inline {
-				if inlineIten.Graphic != nil {
-					return true
+				for _, anyItem := range inlineIten.Graphic.CT_GraphicalObject.GraphicData.Any {
+					if _, ok := anyItem.(*pic.Pic); ok {
+						return true
+					}
 				}
 			}
 		}
