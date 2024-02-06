@@ -70,14 +70,14 @@ func AbsoluteFilename(dt DocType, typ string, index int) string {
 	switch typ {
 	case CorePropertiesType:
 		return "docProps/core.xml"
-	case ExtendedPropertiesType:
+	case ExtendedPropertiesType, ExtendedPropertiesTypeOclc:
 		return "docProps/app.xml"
 	case CustomPropertiesType:
 		return "docProps/custom.xml"
 	case ThumbnailType:
 		return "docProps/thumbnail.jpeg"
 
-	case OfficeDocumentType:
+	case OfficeDocumentType, OfficeDocumentTypeOclc:
 		switch dt {
 		case DocTypeSpreadsheet:
 			return "xl/workbook.xml"
@@ -89,7 +89,7 @@ func AbsoluteFilename(dt DocType, typ string, index int) string {
 			Log("unsupported type %s pair and %v", typ, dt)
 		}
 
-	case ThemeType, ThemeContentType:
+	case ThemeType, ThemeTypeOclc, ThemeContentType:
 		switch dt {
 		case DocTypeSpreadsheet:
 			return fmt.Sprintf("xl/theme/theme%d.xml", index)
@@ -101,7 +101,7 @@ func AbsoluteFilename(dt DocType, typ string, index int) string {
 			Log("unsupported type %s pair and %v", typ, dt)
 		}
 
-	case StylesType:
+	case StylesType, StylesTypeOclc:
 		switch dt {
 		case DocTypeSpreadsheet:
 			return "xl/styles.xml"
@@ -165,17 +165,17 @@ func AbsoluteFilename(dt DocType, typ string, index int) string {
 		return "xl/sharedStrings.xml"
 
 	// WML
-	case FontTableType:
+	case FontTableType, FontTableTypeOclc:
 		return "word/fontTable.xml"
-	case EndNotesType:
+	case EndNotesType, EndNotesTypeOclc:
 		return "word/endnotes.xml"
-	case FootNotesType:
+	case FootNotesType, FootNotesTypeOclc:
 		return "word/footnotes.xml"
 	case NumberingType:
 		return "word/numbering.xml"
-	case WebSettingsType:
+	case WebSettingsType, WebSettingsTypeOclc:
 		return "word/webSettings.xml"
-	case SettingsType:
+	case SettingsType, SettingsTypeOclc:
 		return "word/settings.xml"
 	case HeaderType:
 		return fmt.Sprintf("word/header%d.xml", index)
@@ -191,7 +191,7 @@ func AbsoluteFilename(dt DocType, typ string, index int) string {
 		return fmt.Sprintf("ppt/slideMasters/slideMaster%d.xml", index)
 
 	default:
-		Log("unsupported type %s", typ)
+		Log("---2222----unsupported type %s", typ)
 	}
 	return ""
 }
