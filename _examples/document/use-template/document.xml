@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<w:document xmlns="http://schemas.openxmlformats.org/wordprocessingml/2006/main" xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math" xmlns:ma="http://schemas.openxmlformats.org/schemaLibrary/2006/main" xmlns:pic="http://schemas.openxmlformats.org/drawingml/2006/picture" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:s="http://schemas.openxmlformats.org/officeDocument/2006/sharedTypes" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing" xmlns:xml="http://www.w3.org/XML/1998/namespace" w:conformance="strict">
+	<w:body>
+		<w:p w:rsidR="00C75E19" w:rsidP="00DB41A2" w:rsidRDefault="00DB41A2">
+			<w:pPr>
+				<w:spacing w:line="28pt" w:lineRule="exact"/>
+				<w:jc w:val="center"/>
+				<w:rPr>
+					<w:rFonts w:ascii="方正小标宋简体" w:hAnsi="方正小标宋简体" w:eastAsia="方正小标宋简体"/>
+					<w:color w:val="000000"/>
+					<w:sz w:val="44"/>
+					<w:szCs w:val="44"/>
+				</w:rPr>
+			</w:pPr>
+			<w:r>
+				<m:rPr xmlns:m="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
+					<m:rFonts m:ascii="方正小标宋简体" m:eastAsia="方正小标宋简体" m:hAnsi="方正小标宋简体"/>
+					<m:color m:val="000000"/>
+					<m:sz m:val="44"/>
+					<m:szCs m:val="44"/>
+				</m:rPr>
+				<m:t xmlns:m="http://schemas.openxmlformats.org/wordprocessingml/2006/main">关于东海证券</m:t>
+			</w:r>
+			<w:r>
+				<m:rPr xmlns:m="http://purl.oclc.org/ooxml/wordprocessingml/main">
+					<m:rFonts m:ascii="Times New Roman" m:eastAsia="Times New Roman" m:hAnsi="Times New Roman"/>
+					<m:color m:val="000000"/>
+					<m:sz m:val="44"/>
+					<m:szCs m:val="44"/>
+				</m:rPr>
+				<m:t xmlns:m="http://purl.oclc.org/ooxml/wordprocessingml/main">202</m:t>
+			</w:r>
+			<w:r w:rsidR="009D33C3">
+				<m:rPr xmlns:m="http://purl.oclc.org/ooxml/wordprocessingml/main">
+					<m:rFonts m:asciiTheme="minorEastAsia" m:hAnsiTheme="minorEastAsia" m:hint="eastAsia"/>
+					<m:color m:val="000000"/>
+					<m:sz m:val="44"/>
+					<m:szCs m:val="44"/>
+				</m:rPr>
+				<m:t xmlns:m="http://purl.oclc.org/ooxml/wordprocessingml/main">3</m:t>
+			</w:r>
+			<w:r>
+				<m:rPr xmlns:m="http://purl.oclc.org/ooxml/wordprocessingml/main">
+					<m:rFonts m:ascii="方正小标宋简体" m:eastAsia="方正小标宋简体" m:hAnsi="方正小标宋简体"/>
+					<m:color m:val="000000"/>
+					<m:sz m:val="44"/>
+					<m:szCs m:val="44"/>
+				</m:rPr>
+				<m:t xmlns:m="http://purl.oclc.org/ooxml/wordprocessingml/main">年度信息技术投入情况的证明</m:t>
+			</w:r>
+		</w:p>
+		<w:p w:rsidRPr="009D33C3" w:rsidR="00BF7650" w:rsidP="00DB41A2" w:rsidRDefault="00BF7650">
+			<w:pPr>
+				<w:spacing w:line="28pt" w:lineRule="exact"/>
+				<w:jc w:val="center"/>
+				<w:rPr>
+					<w:rFonts w:hint="eastAsia" w:ascii="方正小标宋简体" w:eastAsia="方正小标宋简体"/>
+					<w:sz w:val="44"/>
+					<w:szCs w:val="44"/>
+				</w:rPr>
+			</w:pPr>
+		</w:p>
+		<w:p w:rsidR="00DB41A2" w:rsidP="00DB41A2" w:rsidRDefault="00DB41A2">
+			<w:pPr>
+				<w:spacing w:line="28pt" w:lineRule="exact"/>
+			</w:pPr>
+			<w:r>
+				<m:rPr xmlns:m="http://purl.oclc.org/ooxml/wordprocessingml/main">
+					<m:rFonts m:ascii="仿宋_GB2312" m:eastAsia="仿宋_GB2312" m:hAnsi="仿宋_GB2312"/>
+					<m:color m:val="000000"/>
+					<m:sz m:val="32"/>
+					<m:szCs m:val="32"/>
+				</m:rPr>
+				<m:t xmlns:m="http://purl.oclc.org/ooxml/wordprocessingml/main">按照东海证券</m:t>
+			</w:r>
+			<w:r>
+				<m:rPr xmlns:m="http://purl.oclc.org/ooxml/wordprocessingml/main">
+					<m:rFonts m:ascii="Times New Roman" m:eastAsia="Times New Roman" m:hAnsi="Times New Roman"/>
+					<m:color m:val="000000"/>
+					<m:sz m:val="32"/>
+					<m:szCs m:val="32"/>
+				</m:rPr>
+				<m:t xmlns:m="http://purl.oclc.org/ooxml/wordprocessingml/main">20</m:t>
+			</w:r>
+			<w:r w:rsidR="006E200F">
+				<m:rPr xmlns:m="http://purl.oclc.org/ooxml/wordprocessingml/main">
+					<m:rFonts m:asciiTheme="minorEastAsia" m:hAnsiTheme="minorEastAsia" m:hint="eastAsia"/>
+					<m:color m:val="000000"/>
+					<m:sz m:val="32"/>
+					<m:szCs m:val="32"/>
+				</m:rPr>
+				<m:t xmlns:m="http://purl.oclc.org/ooxml/wordprocessingml/main">23</m:t>
+			</w:r>
+			<w:r>
+				<m:rPr xmlns:m="http://purl.oclc.org/ooxml/wordprocessingml/main">
+					<m:rFonts m:ascii="仿宋_GB2312" m:eastAsia="仿宋_GB2312" m:hAnsi="仿宋_GB2312"/>
+					<m:color m:val="000000"/>
+					<m:sz m:val="32"/>
+					<m:szCs m:val="32"/>
+				</m:rPr>
+				<m:t xmlns:m="http://purl.oclc.org/ooxml/wordprocessingml/main">年</m:t>
+			</w:r>
+			<w:r>
+				<m:rPr xmlns:m="http://purl.oclc.org/ooxml/wordprocessingml/main">
+					<m:rFonts m:ascii="Times New Roman" m:eastAsia="Times New Roman" m:hAnsi="Times New Roman"/>
+					<m:color m:val="000000"/>
+					<m:sz m:val="32"/>
+					<m:szCs m:val="32"/>
+				</m:rPr>
+				<m:t xmlns:m="http://purl.oclc.org/ooxml/wordprocessingml/main">1</m:t>
+			</w:r>
+			<w:r>
+				<m:rPr xmlns:m="http://purl.oclc.org/ooxml/wordprocessingml/main">
+					<m:rFonts m:ascii="仿宋_GB2312" m:eastAsia="仿宋_GB2312" m:hAnsi="仿宋_GB2312"/>
+					<m:color m:val="000000"/>
+					<m:sz m:val="32"/>
+					<m:szCs m:val="32"/>
+				</m:rPr>
+				<m:t xmlns:m="http://purl.oclc.org/ooxml/wordprocessingml/main">月</m:t>
+			</w:r>
+			<w:r>
+				<m:rPr xmlns:m="http://purl.oclc.org/ooxml/wordprocessingml/main">
+					<m:rFonts m:ascii="Times New Roman" m:eastAsia="Times New Roman" m:hAnsi="Times New Roman"/>
+					<m:color m:val="000000"/>
+					<m:sz m:val="32"/>
+					<m:szCs m:val="32"/>
+				</m:rPr>
+				<m:t xmlns:m="http://purl.oclc.org/ooxml/wordprocessingml/main">1</m:t>
+			</w:r>
+			<w:r>
+				<m:rPr xmlns:m="http://purl.oclc.org/ooxml/wordprocessingml/main">
+					<m:rFonts m:ascii="仿宋_GB2312" m:eastAsia="仿宋_GB2312" m:hAnsi="仿宋_GB2312"/>
+					<m:color m:val="000000"/>
+					<m:sz m:val="32"/>
+					<m:szCs m:val="32"/>
+				</m:rPr>
+				<m:t xmlns:m="http://purl.oclc.org/ooxml/wordprocessingml/main">日至</m:t>
+			</w:r>
+			<w:r>
+				<m:rPr xmlns:m="http://purl.oclc.org/ooxml/wordprocessingml/main">
+					<m:rFonts m:ascii="Times New Roman" m:eastAsia="Times New Roman" m:hAnsi="Times New Roman"/>
+					<m:color m:val="000000"/>
+					<m:sz m:val="32"/>
+					<m:szCs m:val="32"/>
+				</m:rPr>
+				<m:t xmlns:m="http://purl.oclc.org/ooxml/wordprocessingml/main">202</m:t>
+			</w:r>
+			<w:r w:rsidR="006E200F">
+				<m:rPr xmlns:m="http://purl.oclc.org/ooxml/wordprocessingml/main">
+					<m:rFonts m:asciiTheme="minorEastAsia" m:hAnsiTheme="minorEastAsia" m:hint="eastAsia"/>
+					<m:color m:val="000000"/>
+					<m:sz m:val="32"/>
+					<m:szCs m:val="32"/>
+				</m:rPr>
+				<m:t xmlns:m="http://purl.oclc.org/ooxml/wordprocessingml/main">3</m:t>
+			</w:r>
+			<w:r>
+				<m:rPr xmlns:m="http://purl.oclc.org/ooxml/wordprocessingml/main">
+					<m:rFonts m:ascii="仿宋_GB2312" m:eastAsia="仿宋_GB2312" m:hAnsi="仿宋_GB2312"/>
+					<m:color m:val="000000"/>
+					<m:sz m:val="32"/>
+					<m:szCs m:val="32"/>
+				</m:rPr>
+				<m:t xmlns:m="http://purl.oclc.org/ooxml/wordprocessingml/main">年</m:t>
+			</w:r>
+			<w:r>
+				<m:rPr xmlns:m="http://purl.oclc.org/ooxml/wordprocessingml/main">
+					<m:rFonts m:ascii="Times New Roman" m:eastAsia="Times New Roman" m:hAnsi="Times New Roman"/>
+					<m:color m:val="000000"/>
+					<m:sz m:val="32"/>
+					<m:szCs m:val="32"/>
+				</m:rPr>
+				<m:t xmlns:m="http://purl.oclc.org/ooxml/wordprocessingml/main">12</m:t>
+			</w:r>
+			<w:r>
+				<m:rPr xmlns:m="http://purl.oclc.org/ooxml/wordprocessingml/main">
+					<m:rFonts m:ascii="仿宋_GB2312" m:eastAsia="仿宋_GB2312" m:hAnsi="仿宋_GB2312"/>
+					<m:color m:val="000000"/>
+					<m:sz m:val="32"/>
+					<m:szCs m:val="32"/>
+				</m:rPr>
+				<m:t xmlns:m="http://purl.oclc.org/ooxml/wordprocessingml/main">月</m:t>
+			</w:r>
+			<w:r>
+				<m:rPr xmlns:m="http://purl.oclc.org/ooxml/wordprocessingml/main">
+					<m:rFonts m:ascii="Times New Roman" m:eastAsia="Times New Roman" m:hAnsi="Times New Roman"/>
+					<m:color m:val="000000"/>
+					<m:sz m:val="32"/>
+					<m:szCs m:val="32"/>
+				</m:rPr>
+				<m:t xmlns:m="http://purl.oclc.org/ooxml/wordprocessingml/main">31</m:t>
+			</w:r>
+			<w:r>
+				<m:rPr xmlns:m="http://purl.oclc.org/ooxml/wordprocessingml/main">
+					<m:rFonts m:ascii="仿宋_GB2312" m:eastAsia="仿宋_GB2312" m:hAnsi="仿宋_GB2312"/>
+					<m:color m:val="000000"/>
+					<m:sz m:val="32"/>
+					<m:szCs m:val="32"/>
+				</m:rPr>
+				<m:t xmlns:m="http://purl.oclc.org/ooxml/wordprocessingml/main">日签订的信息技术合同统计，本单位</m:t>
+			</w:r>
+			<w:r>
+				<m:rPr xmlns:m="http://purl.oclc.org/ooxml/wordprocessingml/main">
+					<m:rFonts m:ascii="Times New Roman" m:eastAsia="Times New Roman" m:hAnsi="Times New Roman"/>
+					<m:color m:val="000000"/>
+					<m:sz m:val="32"/>
+					<m:szCs m:val="32"/>
+				</m:rPr>
+				<m:t xmlns:m="http://purl.oclc.org/ooxml/wordprocessingml/main">202</m:t>
+			</w:r>
+			<w:r w:rsidR="006E200F">
+				<m:rPr xmlns:m="http://purl.oclc.org/ooxml/wordprocessingml/main">
+					<m:rFonts m:asciiTheme="minorEastAsia" m:hAnsiTheme="minorEastAsia" m:hint="eastAsia"/>
+					<m:color m:val="000000"/>
+					<m:sz m:val="32"/>
+					<m:szCs m:val="32"/>
+				</m:rPr>
+				<m:t xmlns:m="http://purl.oclc.org/ooxml/wordprocessingml/main">3</m:t>
+			</w:r>
+			<w:r w:rsidR="006E200F">
+				<m:rPr xmlns:m="http://purl.oclc.org/ooxml/wordprocessingml/main">
+					<m:rFonts m:ascii="宋体" m:eastAsia="宋体" m:hAnsi="宋体" m:cs="宋体" m:hint="eastAsia"/>
+					<m:color m:val="000000"/>
+					<m:sz m:val="32"/>
+					<m:szCs m:val="32"/>
+				</m:rPr>
+				<m:t xmlns:m="http://purl.oclc.org/ooxml/wordprocessingml/main">年</m:t>
+			</w:r>
+			<w:r w:rsidR="009603EB">
+				<m:rPr xmlns:m="http://purl.oclc.org/ooxml/wordprocessingml/main">
+					<m:rFonts m:ascii="宋体" m:eastAsia="宋体" m:hAnsi="宋体" m:cs="宋体" m:hint="eastAsia"/>
+					<m:color m:val="000000"/>
+					<m:sz m:val="32"/>
+					<m:szCs m:val="32"/>
+				</m:rPr>
+				<m:t xmlns:m="http://purl.oclc.org/ooxml/wordprocessingml/main">度信息技术总投入</m:t>
+			</w:r>
+			<w:r w:rsidRPr="00866AD8" w:rsidR="00866AD8">
+				<m:rPr xmlns:m="http://purl.oclc.org/ooxml/wordprocessingml/main">
+					<m:rFonts m:ascii="宋体" m:eastAsia="宋体" m:hAnsi="宋体" m:cs="宋体"/>
+					<m:color m:val="000000"/>
+					<m:sz m:val="32"/>
+					<m:szCs m:val="32"/>
+				</m:rPr>
+				<m:t xmlns:m="http://purl.oclc.org/ooxml/wordprocessingml/main">XX</m:t>
+			</w:r>
+			<w:r w:rsidRPr="00866AD8" w:rsidR="00866AD8">
+				<m:rPr xmlns:m="http://purl.oclc.org/ooxml/wordprocessingml/main">
+					<m:rFonts m:ascii="宋体" m:eastAsia="宋体" m:hAnsi="宋体" m:cs="宋体" m:hint="eastAsia"/>
+					<m:color m:val="000000"/>
+					<m:sz m:val="32"/>
+					<m:szCs m:val="32"/>
+				</m:rPr>
+				<m:t xmlns:m="http://purl.oclc.org/ooxml/wordprocessingml/main">元</m:t>
+			</w:r>
+			<w:r w:rsidR="00E30440">
+				<m:rPr xmlns:m="http://purl.oclc.org/ooxml/wordprocessingml/main">
+					<m:rFonts m:ascii="宋体" m:eastAsia="宋体" m:hAnsi="宋体" m:cs="宋体" m:hint="eastAsia"/>
+					<m:color m:val="000000"/>
+					<m:sz m:val="32"/>
+					<m:szCs m:val="32"/>
+				</m:rPr>
+				<m:t xmlns:m="http://purl.oclc.org/ooxml/wordprocessingml/main">，</m:t>
+			</w:r>
+			<w:r w:rsidRPr="00866AD8">
+				<m:rPr xmlns:m="http://purl.oclc.org/ooxml/wordprocessingml/main">
+					<m:rFonts m:ascii="宋体" m:eastAsia="宋体" m:hAnsi="宋体" m:cs="宋体"/>
+					<m:color m:val="000000"/>
+					<m:sz m:val="32"/>
+					<m:szCs m:val="32"/>
+				</m:rPr>
+				<m:t xmlns:m="http://purl.oclc.org/ooxml/wordprocessingml/main">其中一般业务系统软硬件</m:t>
+			</w:r>
+			<w:proofErr w:type="gramStart"/>
+			<w:r w:rsidRPr="00866AD8">
+				<m:rPr xmlns:m="http://purl.oclc.org/ooxml/wordprocessingml/main">
+					<m:rFonts m:ascii="宋体" m:eastAsia="宋体" m:hAnsi="宋体" m:cs="宋体"/>
+					<m:color m:val="000000"/>
+					<m:sz m:val="32"/>
+					<m:szCs m:val="32"/>
+				</m:rPr>
+				<m:t xmlns:m="http://purl.oclc.org/ooxml/wordprocessingml/main">采购总</m:t>
+			</w:r>
+			<w:proofErr w:type="gramEnd"/>
+			<w:r w:rsidRPr="00866AD8">
+				<m:rPr xmlns:m="http://purl.oclc.org/ooxml/wordprocessingml/main">
+					<m:rFonts m:ascii="宋体" m:eastAsia="宋体" m:hAnsi="宋体" m:cs="宋体"/>
+					<m:color m:val="000000"/>
+					<m:sz m:val="32"/>
+					<m:szCs m:val="32"/>
+				</m:rPr>
+				<m:t xmlns:m="http://purl.oclc.org/ooxml/wordprocessingml/main">金额为:29013290元。</m:t>
+			</w:r>
+		</w:p>
+		<w:p w:rsidR="00DB41A2" w:rsidP="00DB41A2" w:rsidRDefault="00DB41A2">
+			<w:pPr>
+				<w:spacing w:line="28pt" w:lineRule="exact"/>
+				<w:ind w:firstLine="32pt" w:firstLineChars="200"/>
+				<w:jc w:val="start"/>
+			</w:pPr>
+			<w:r>
+				<m:rPr xmlns:m="http://purl.oclc.org/ooxml/wordprocessingml/main">
+					<m:rFonts m:ascii="Times New Roman" m:eastAsia="Times New Roman" m:hAnsi="Times New Roman"/>
+					<m:color m:val="000000"/>
+					<m:sz m:val="32"/>
+					<m:szCs m:val="32"/>
+				</m:rPr>
+				<m:t xmlns:m="http://purl.oclc.org/ooxml/wordprocessingml/main">202</m:t>
+			</w:r>
+			<w:r w:rsidR="008477FA">
+				<m:rPr xmlns:m="http://purl.oclc.org/ooxml/wordprocessingml/main">
+					<m:rFonts m:asciiTheme="minorEastAsia" m:hAnsiTheme="minorEastAsia" m:hint="eastAsia"/>
+					<m:color m:val="000000"/>
+					<m:sz m:val="32"/>
+					<m:szCs m:val="32"/>
+				</m:rPr>
+				<m:t xmlns:m="http://purl.oclc.org/ooxml/wordprocessingml/main">3</m:t>
+			</w:r>
+			<w:r>
+				<m:rPr xmlns:m="http://purl.oclc.org/ooxml/wordprocessingml/main">
+					<m:rFonts m:ascii="仿宋_GB2312" m:eastAsia="仿宋_GB2312" m:hAnsi="仿宋_GB2312"/>
+					<m:color m:val="000000"/>
+					<m:sz m:val="32"/>
+					<m:szCs m:val="32"/>
+				</m:rPr>
+				<m:t xmlns:m="http://purl.oclc.org/ooxml/wordprocessingml/main">年度新增采购桌面终端总数量为:</m:t>
+			</w:r>
+			<w:r>
+				<m:rPr xmlns:m="http://purl.oclc.org/ooxml/wordprocessingml/main">
+					<m:rFonts m:ascii="Times New Roman" m:eastAsia="Times New Roman" m:hAnsi="Times New Roman"/>
+					<m:color m:val="000000"/>
+					<m:sz m:val="32"/>
+					<m:szCs m:val="32"/>
+				</m:rPr>
+				<m:t xmlns:m="http://purl.oclc.org/ooxml/wordprocessingml/main">412</m:t>
+			</w:r>
+			<w:r>
+				<m:rPr xmlns:m="http://purl.oclc.org/ooxml/wordprocessingml/main">
+					<m:rFonts m:ascii="仿宋_GB2312" m:eastAsia="仿宋_GB2312" m:hAnsi="仿宋_GB2312"/>
+					<m:color m:val="000000"/>
+					<m:sz m:val="32"/>
+					<m:szCs m:val="32"/>
+				</m:rPr>
+				<m:t xmlns:m="http://purl.oclc.org/ooxml/wordprocessingml/main">台。</m:t>
+			</w:r>
+		</w:p>
+		<w:p w:rsidR="00DB41A2" w:rsidP="00DB41A2" w:rsidRDefault="00DB41A2">
+			<w:pPr>
+				<w:spacing w:line="28pt" w:lineRule="exact"/>
+				<w:ind w:firstLine="32pt" w:firstLineChars="200"/>
+				<w:jc w:val="start"/>
+			</w:pPr>
+			<w:r>
+				<m:rPr xmlns:m="http://purl.oclc.org/ooxml/wordprocessingml/main">
+					<m:rFonts m:ascii="仿宋_GB2312" m:eastAsia="仿宋_GB2312" m:hAnsi="仿宋_GB2312"/>
+					<m:color m:val="000000"/>
+					<m:sz m:val="32"/>
+					<m:szCs m:val="32"/>
+				</m:rPr>
+				<m:t xmlns:m="http://purl.oclc.org/ooxml/wordprocessingml/main">特此证明。</m:t>
+			</w:r>
+		</w:p>
+		<w:p w:rsidR="00CB2A1F" w:rsidRDefault="00CB2A1F"/>
+		<w:p w:rsidR="00CB2A1F" w:rsidRDefault="00CB2A1F"/>
+		<w:p w:rsidR="004973CE" w:rsidP="00DB41A2" w:rsidRDefault="004973CE">
+			<w:pPr>
+				<w:spacing w:line="28pt" w:lineRule="exact"/>
+				<w:ind w:end="42pt" w:endChars="400" w:firstLine="32pt" w:firstLineChars="200"/>
+				<w:jc w:val="end"/>
+			</w:pPr>
+			<w:r>
+				<m:rPr xmlns:m="http://purl.oclc.org/ooxml/wordprocessingml/main">
+					<m:rFonts m:ascii="仿宋_GB2312" m:eastAsia="仿宋_GB2312" m:hAnsi="仿宋_GB2312"/>
+					<m:color m:val="000000"/>
+					<m:sz m:val="32"/>
+					<m:szCs m:val="32"/>
+				</m:rPr>
+				<m:t xmlns:m="http://purl.oclc.org/ooxml/wordprocessingml/main">东海证券股份有限公司</m:t>
+			</w:r>
+		</w:p>
+		<w:p w:rsidR="004973CE" w:rsidP="00DB41A2" w:rsidRDefault="004973CE">
+			<w:pPr>
+				<w:spacing w:line="28pt" w:lineRule="exact"/>
+				<w:ind w:end="52.50pt" w:endChars="500" w:firstLine="32pt" w:firstLineChars="200"/>
+				<w:jc w:val="end"/>
+			</w:pPr>
+			<w:r>
+				<m:rPr xmlns:m="http://purl.oclc.org/ooxml/wordprocessingml/main">
+					<m:rFonts m:ascii="Times New Roman" m:eastAsia="Times New Roman" m:hAnsi="Times New Roman"/>
+					<m:color m:val="000000"/>
+					<m:sz m:val="32"/>
+					<m:szCs m:val="32"/>
+				</m:rPr>
+				<m:t xmlns:m="http://purl.oclc.org/ooxml/wordprocessingml/main">202</m:t>
+			</w:r>
+			<w:r w:rsidR="006F4373">
+				<m:rPr xmlns:m="http://purl.oclc.org/ooxml/wordprocessingml/main">
+					<m:rFonts m:asciiTheme="minorEastAsia" m:hAnsiTheme="minorEastAsia" m:hint="eastAsia"/>
+					<m:color m:val="000000"/>
+					<m:sz m:val="32"/>
+					<m:szCs m:val="32"/>
+				</m:rPr>
+				<m:t xmlns:m="http://purl.oclc.org/ooxml/wordprocessingml/main">4</m:t>
+			</w:r>
+			<w:r>
+				<m:rPr xmlns:m="http://purl.oclc.org/ooxml/wordprocessingml/main">
+					<m:rFonts m:ascii="仿宋_GB2312" m:eastAsia="仿宋_GB2312" m:hAnsi="仿宋_GB2312"/>
+					<m:color m:val="000000"/>
+					<m:sz m:val="32"/>
+					<m:szCs m:val="32"/>
+				</m:rPr>
+				<m:t xmlns:m="http://purl.oclc.org/ooxml/wordprocessingml/main">年</m:t>
+			</w:r>
+			<w:r>
+				<m:rPr xmlns:m="http://purl.oclc.org/ooxml/wordprocessingml/main">
+					<m:rFonts m:ascii="Times New Roman" m:eastAsia="Times New Roman" m:hAnsi="Times New Roman"/>
+					<m:color m:val="000000"/>
+					<m:sz m:val="32"/>
+					<m:szCs m:val="32"/>
+				</m:rPr>
+				<m:t xmlns:m="http://purl.oclc.org/ooxml/wordprocessingml/main">2</m:t>
+			</w:r>
+			<w:r>
+				<m:rPr xmlns:m="http://purl.oclc.org/ooxml/wordprocessingml/main">
+					<m:rFonts m:ascii="仿宋_GB2312" m:eastAsia="仿宋_GB2312" m:hAnsi="仿宋_GB2312"/>
+					<m:color m:val="000000"/>
+					<m:sz m:val="32"/>
+					<m:szCs m:val="32"/>
+				</m:rPr>
+				<m:t xmlns:m="http://purl.oclc.org/ooxml/wordprocessingml/main">月</m:t>
+			</w:r>
+			<w:r>
+				<m:rPr xmlns:m="http://purl.oclc.org/ooxml/wordprocessingml/main">
+					<m:rFonts m:ascii="Times New Roman" m:eastAsia="Times New Roman" m:hAnsi="Times New Roman"/>
+					<m:color m:val="000000"/>
+					<m:sz m:val="32"/>
+					<m:szCs m:val="32"/>
+				</m:rPr>
+				<m:t xmlns:m="http://purl.oclc.org/ooxml/wordprocessingml/main">1</m:t>
+			</w:r>
+			<w:r w:rsidR="006F4373">
+				<m:rPr xmlns:m="http://purl.oclc.org/ooxml/wordprocessingml/main">
+					<m:rFonts m:asciiTheme="minorEastAsia" m:hAnsiTheme="minorEastAsia" m:hint="eastAsia"/>
+					<m:color m:val="000000"/>
+					<m:sz m:val="32"/>
+					<m:szCs m:val="32"/>
+				</m:rPr>
+				<m:t xmlns:m="http://purl.oclc.org/ooxml/wordprocessingml/main">2</m:t>
+			</w:r>
+			<w:r>
+				<m:rPr xmlns:m="http://purl.oclc.org/ooxml/wordprocessingml/main">
+					<m:rFonts m:ascii="仿宋_GB2312" m:eastAsia="仿宋_GB2312" m:hAnsi="仿宋_GB2312"/>
+					<m:color m:val="000000"/>
+					<m:sz m:val="32"/>
+					<m:szCs m:val="32"/>
+				</m:rPr>
+				<m:t xmlns:m="http://purl.oclc.org/ooxml/wordprocessingml/main">日</m:t>
+			</w:r>
+		</w:p>
+		<w:sectPr w:rsidR="004973CE">
+			<w:pgSz w:w="595.30pt" w:h="841.90pt"/>
+			<w:pgMar w:top="72pt" w:right="90pt" w:bottom="72pt" w:left="90pt" w:header="42.55pt" w:footer="49.60pt" w:gutter="0pt"/>
+			<w:cols w:space="21.25pt"/>
+			<w:docGrid w:type="lines" w:linePitch="312"/>
+		</w:sectPr>
+	</w:body>
+</w:document>
