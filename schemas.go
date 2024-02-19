@@ -27,7 +27,12 @@ const (
 	ExtendedPropertiesType = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/extended-properties"
 	CorePropertiesType     = "http://schemas.openxmlformats.org/package/2006/relationships/metadata/core-properties"
 	CustomPropertiesType   = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/custom-properties"
-
+	// purl.oclc.org  站点提供的ooxml 属性
+	OfficeDocumentTypeOclc     = "http://purl.oclc.org/ooxml/officeDocument/relationships/officeDocument"
+	ExtendedPropertiesTypeOclc = "http://purl.oclc.org/ooxml/officeDocument/relationships/extendedProperties"
+	StylesTypeOclc             = "http://purl.oclc.org/ooxml/officeDocument/relationships/styles"
+	SettingsTypeOclc           = "http://purl.oclc.org/ooxml/officeDocument/relationships/settings"
+	ThemeTypeOclc              = "http://purl.oclc.org/ooxml/officeDocument/relationships/theme"
 	// SML
 	WorksheetType            = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet"
 	WorksheetContentType     = "application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml"
@@ -40,14 +45,18 @@ const (
 	TableStylesType          = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/tableStyles"
 
 	// WML
-	HeaderType      = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/header"
-	FooterType      = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/footer"
-	NumberingType   = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/numbering"
-	FontTableType   = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/fontTable"
-	WebSettingsType = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/webSettings"
-	FootNotesType   = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/footnotes"
-	EndNotesType    = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/endnotes"
-
+	HeaderType        = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/header"
+	FooterType        = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/footer"
+	NumberingType     = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/numbering"
+	FontTableType     = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/fontTable"
+	FontTableTypeOclc = "http://purl.oclc.org/ooxml/officeDocument/relationships/fontTable"
+	WebSettingsType   = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/webSettings"
+	FootNotesType     = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/footnotes"
+	EndNotesType      = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/endnotes"
+	// purl.oclc.org  站点提供的ooxml 属性
+	WebSettingsTypeOclc = "http://purl.oclc.org/ooxml/officeDocument/relationships/webSettings"
+	FootNotesTypeOclc   = "http://purl.oclc.org/ooxml/officeDocument/relationships/footnotes"
+	EndNotesTypeOclc    = "http://purl.oclc.org/ooxml/officeDocument/relationships/endnotes"
 	// PML
 	SlideType                  = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/slide"
 	SlideContentType           = "application/vnd.openxmlformats-officedocument.presentationml.slide+xml"
