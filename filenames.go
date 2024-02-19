@@ -191,7 +191,7 @@ func AbsoluteFilename(dt DocType, typ string, index int) string {
 		return fmt.Sprintf("ppt/slideMasters/slideMaster%d.xml", index)
 
 	default:
-		Log("---2222----unsupported type %s", typ)
+		Log("unsupported type %s", typ)
 	}
 	return ""
 }
