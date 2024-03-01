@@ -23,7 +23,7 @@ func main() {
 	// document that contains text in each style of interest.  As an example,
 	// see the template.docx in this directory.  It contains a paragraph set in
 	// each style that Word supports by default.
-	doc, err := document.Open(pathPre + "财务证明材料.docx")
+	doc, err := document.Open(pathPre + "红头文件精简版本测试使用.docx")
 
 	if err != nil {
 		log.Fatalf("error opening Windows Word 2016 document: %s", err)

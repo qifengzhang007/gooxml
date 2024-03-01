@@ -11,7 +11,6 @@ package picture
 
 import (
 	"encoding/xml"
-
 	"github.com/qifengzhang007/gooxml"
 	"github.com/qifengzhang007/gooxml/schema/soo/dml"
 )

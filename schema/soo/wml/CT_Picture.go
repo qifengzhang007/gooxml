@@ -11,6 +11,7 @@ package wml
 
 import (
 	"encoding/xml"
+	"fmt"
 
 	"github.com/qifengzhang007/gooxml"
 )
@@ -20,6 +21,7 @@ type CT_Picture struct {
 	Movie *CT_Rel
 	// Floating Embedded Control
 	Control *CT_Control
+	Shape   *CT_Shape
 }
 
 func NewCT_Picture() *CT_Picture {
@@ -36,6 +38,10 @@ func (m *CT_Picture) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	if m.Control != nil {
 		secontrol := xml.StartElement{Name: xml.Name{Local: "w:control"}}
 		e.EncodeElement(m.Control, secontrol)
+	}
+	if m.Shape != nil {
+		shape := xml.StartElement{Name: xml.Name{Local: "v:shape"}}
+		e.EncodeElement(m.Shape, shape)
 	}
 	e.EncodeToken(xml.EndElement{Name: start.Name})
 	return nil
@@ -62,7 +68,13 @@ lCT_Picture:
 				if err := d.DecodeElement(m.Control, &el); err != nil {
 					return err
 				}
+			case xml.Name{Space: "urn:schemas-microsoft-com:vml", Local: "shape"}:
+				m.Shape = NewCT_Shape()
+				if err := d.DecodeElement(m.Shape, &el); err != nil {
+					return err
+				}
 			default:
+				fmt.Println("????这里？？？", el.Name)
 				gooxml.Log("skipping unsupported element on CT_Picture %v", el.Name)
 				if err := d.Skip(); err != nil {
 					return err
@@ -90,6 +102,11 @@ func (m *CT_Picture) ValidateWithPath(path string) error {
 	}
 	if m.Control != nil {
 		if err := m.Control.ValidateWithPath(path + "/Control"); err != nil {
+			return err
+		}
+	}
+	if m.Shape != nil {
+		if err := m.Control.ValidateWithPath(path + "/Shape"); err != nil {
 			return err
 		}
 	}
