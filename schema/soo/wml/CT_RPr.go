@@ -15,6 +15,8 @@ import (
 	"github.com/qifengzhang007/gooxml"
 )
 
+//开发参考文件
+
 type CT_RPr struct {
 	// Referenced Character Style
 	RStyle *CT_String

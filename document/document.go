@@ -807,7 +807,9 @@ func (d *Document) onNewRelationship(decMap *zippkg.DecodeMap, target, typ strin
 		if newExt := filepath.Ext(rel.TargetAttr); newExt != ext {
 			rel.TargetAttr = rel.TargetAttr[0:len(rel.TargetAttr)-len(newExt)] + ext
 		}
+		//  customer  property  unsupported
 	case gooxml.CustomProperties:
+	case gooxml.CustomXml:
 		// The xml custom attribute corresponds to a different function, the attribute name can not be determined, the program does not need to deal with .
 
 	default:

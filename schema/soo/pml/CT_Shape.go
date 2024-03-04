@@ -111,6 +111,7 @@ lCT_Shape:
 					return err
 				}
 			default:
+				fmt.Println("应该是这里输出的日志")
 				gooxml.Log("skipping unsupported element on CT_Shape %v", el.Name)
 				if err := d.Skip(); err != nil {
 					return err
