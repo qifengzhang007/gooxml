@@ -1,6 +1,7 @@
 # Binaries for programs and plugins
 *.exe
 .idea
+.github
 *.dll
 *.so
 *.dylib
