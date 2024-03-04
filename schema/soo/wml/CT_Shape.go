@@ -36,7 +36,7 @@ type CT_Shape struct {
 	//  ↓↓↓ 下级结构体  ↓↓↓
 	// Spacing Above Paragraph
 
-	//Path      *CT_ShapePath
+	Path      *CT_ShapePath
 	Fill      *CT_ShapeFill
 	Stroke    *CT_ShapeStroke
 	Imagedata *CT_ShapeImagedata
@@ -98,10 +98,10 @@ func (m *CT_Shape) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	e.EncodeToken(start)
 
 	// 节点编码
-	//if m.Path != nil {
-	//	path := xml.StartElement{Name: xml.Name{Local: "v:path"}}
-	//	e.EncodeElement(m.Path, path)
-	//}
+	if m.Path != nil {
+		path := xml.StartElement{Name: xml.Name{Local: "v:path"}}
+		e.EncodeElement(m.Path, path)
+	}
 	if m.Fill != nil {
 		fill := xml.StartElement{Name: xml.Name{Local: "v:fill"}}
 		e.EncodeElement(m.Fill, fill)
@@ -232,11 +232,11 @@ lCT_Path:
 		switch el := tok.(type) {
 		case xml.StartElement:
 			switch el.Name {
-			//case xml.Name{Space: "urn:schemas-microsoft-com:vml", Local: "path"}:
-			//	m.Path = NewCT_ShapePath()
-			//	if err := d.DecodeElement(m.Path, &el); err != nil {
-			//		return err
-			//	}
+			case xml.Name{Space: "urn:schemas-microsoft-com:vml", Local: "path"}:
+				m.Path = NewCT_ShapePath()
+				if err := d.DecodeElement(m.Path, &el); err != nil {
+					return err
+				}
 			case xml.Name{Space: "urn:schemas-microsoft-com:vml", Local: "fill"}:
 				m.Fill = NewCT_ShapeFill()
 				if err := d.DecodeElement(m.Fill, &el); err != nil {
@@ -268,7 +268,7 @@ lCT_Path:
 					return err
 				}
 			default:
-				gooxml.Log("skipping unsupported element on CT_Path_2024ttt %v", el.Name)
+				gooxml.Log("skipping unsupported element on CT_Path %v", el.Name)
 				if err := d.Skip(); err != nil {
 					return err
 				}

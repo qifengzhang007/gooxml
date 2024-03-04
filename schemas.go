@@ -72,4 +72,5 @@ const (
 
 	// CustomProperties
 	CustomProperties = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/custom-properties"
+	CustomXml        = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXml"
 )

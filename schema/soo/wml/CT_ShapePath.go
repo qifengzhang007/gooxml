@@ -28,6 +28,9 @@ func (m *CT_ShapePath) MarshalXML(e *xml.Encoder, start xml.StartElement) error 
 			Value: fmt.Sprintf("%v", *m.RemarkAttr)})
 	}
 	e.EncodeToken(start)
+
+	// 编码元素结构
+	e.EncodeToken(xml.EndElement{Name: start.Name})
 	return nil
 }
 
