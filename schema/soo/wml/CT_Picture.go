@@ -11,8 +11,6 @@ package wml
 
 import (
 	"encoding/xml"
-	"fmt"
-
 	"github.com/qifengzhang007/gooxml"
 )
 
@@ -74,7 +72,6 @@ lCT_Picture:
 					return err
 				}
 			default:
-				fmt.Println("????这里？？？", el.Name)
 				gooxml.Log("skipping unsupported element on CT_Picture %v", el.Name)
 				if err := d.Skip(); err != nil {
 					return err
