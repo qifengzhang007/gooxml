@@ -312,3 +312,13 @@ func (r Run) GetPicInfo() (pics []pic.Pic) {
 	}
 	return
 }
+
+// GetExtraElement  Get  run Extra element
+func (r Run) GetExtraElement() []gooxml.Any {
+	return r.x.Extra
+}
+
+// SetExtraElement  Set  run Extra element
+func (r Run) SetExtraElement(ExtraElement []gooxml.Any) {
+	r.x.Extra = ExtraElement
+}
