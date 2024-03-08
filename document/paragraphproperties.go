@@ -175,6 +175,7 @@ func (p ParagraphProperties) SetStartIndent(m measurement.Distance) {
 		p.x.Ind = wml.NewCT_Ind()
 	}
 	if m == measurement.Zero {
+		p.x.Ind.LeftAttr = nil
 		p.x.Ind.StartAttr = nil
 		p.x.Ind.StartCharsAttr = nil
 	} else {
