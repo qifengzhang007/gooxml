@@ -1,5 +1,7 @@
 # Binaries for programs and plugins
 *.exe
+/.idea/
+.idea/
 .idea
 .github
 *.dll
