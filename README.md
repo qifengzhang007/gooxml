@@ -1,13 +1,11 @@
+
+<h4 align="center"><strong>English</strong> | [简体中文](./README_CN.md)
+
+<br/>
 ** Notice**
-Special thanks to the original author for the open source library: https://github.com/carmel/gooxml.
+Special thanks to the original author for the open source library: https://github.com/qifengzhang007/gooxml.
 As the original repository is not maintained , can not repair the original repository by submitting the code in the way of problems , so I used the original repository of the code , for secondary development / repair some of the possible bugs .
 
- <hr/>
-
-特别感谢原作者提供的开源库：https://github.com/carmel/gooxml。
-由于原始仓库不在维护,无法通过提交代码的方式修复原始仓库中存在的问题，因此我使用了原始仓库的代码，进行二次开发/修复一些可能存在的bug.
-
- <hr/>
 **gooxml** is a library for creation of Office Open XML documents (.docx, .xlsx
 and .pptx).  It's goal is to be the most compatible and highest performance Go
 library for creation and editing of docx/xlsx/pptx files.
@@ -59,8 +57,8 @@ contains generated structs, serialization and deserialization code for all of
 DOCX/XLSX/PPTX.
 
 ## Installation ##
-    // Before installing this package, please check the latest tags version number, e.g. v1.0.6-alpha
-	go get  github.com/qifengzhang007/gooxml@v1.0.6-alpha
+    // Before installing this package, please check the latest tags version number, e.g. v1.0.12-alpha
+	go get  github.com/qifengzhang007/gooxml@v1.0.12-alpha
 
 
 ## Document Examples ##
