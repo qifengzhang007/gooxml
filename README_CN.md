@@ -1,4 +1,4 @@
-<h4 align="center"><strong>简体中文</strong> | [English](./README.md) </h4>
+<h4 align="center">**简体中文**|[English](./README.md)</h4>
 
 ### 本库使用说名
 

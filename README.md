@@ -1,5 +1,5 @@
 
-<h4 align="center"><strong>English</strong> | [简体中文](./README_CN.md) </h4>
+<h4 align="center">**English**|[简体中文](./README_CN.md)</h4>
 
 ** Notice**
 Special thanks to the original author for the open source library: https://github.com/qifengzhang007/gooxml.
