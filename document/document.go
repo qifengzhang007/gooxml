@@ -360,6 +360,22 @@ func (d *Document) tables(bc *wml.EG_ContentBlockContent) []Table {
 	return ret
 }
 
+// RemoveTable
+// @delTabIndex need delete table index,  start with 0
+func (d *Document) RemoveTable(delTabIndex int) {
+	tmpCount := 0
+	for _, ble := range d.x.Body.EG_BlockLevelElts {
+		for index2, bc := range ble.EG_ContentBlockContent {
+			if bc.Tbl != nil {
+				if tmpCount == delTabIndex {
+					ble.EG_ContentBlockContent[index2] = wml.NewEG_ContentBlockContent()
+				}
+				tmpCount++
+			}
+		}
+	}
+}
+
 // Tables returns the tables defined in the document.
 func (d *Document) Tables() []Table {
 	ret := []Table{}
