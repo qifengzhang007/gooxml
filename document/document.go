@@ -362,6 +362,10 @@ func (d *Document) tables(bc *wml.EG_ContentBlockContent) []Table {
 
 // RemoveTable
 // @delTabIndex need delete table index,  start with 0
+// Note: After you delete a table, the indexes of the remaining tables will be recalculated starting from 0.
+// For example: If there are originally 4 tables and you need to delete the 2nd and 3rd tables.
+// You should execute the command: doc.RemoveTable(1) = delete the 2nd table, at this point the indexes of the remaining tables are recalculated starting from 0,
+// Then execute doc.RemoveTable(1) again = delete the 3rd table.
 func (d *Document) RemoveTable(delTabIndex int) {
 	tmpCount := 0
 	for _, ble := range d.x.Body.EG_BlockLevelElts {
