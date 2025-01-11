@@ -1,7 +1,7 @@
 <h4 align="center"><strong>English</strong> | <a href="https://github.com/qifengzhang007/gooxml/blob/master/README_CN.md">简体中文</a></h4>
 
 ** Notice**
-Special thanks to the original author for the open source library: https://github.com/qifengzhang007/gooxml.
+Special thanks to the original author for the open source library: github.com/carmel/gooxml .
 As the original repository is not maintained , can not repair the original repository by submitting the code in the way of problems , so I used the original repository of the code , for secondary development / repair some of the possible bugs .
 
 **gooxml** is a library for creation of Office Open XML documents (.docx, .xlsx
