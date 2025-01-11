@@ -1,7 +1,6 @@
 
-<h4 align="center"><strong>English</strong> | [简体中文](./README_CN.md)
+<h4 align="center"><strong>English</strong> | [简体中文](./README_CN.md) </h4>
 
-<br/>
 ** Notice**
 Special thanks to the original author for the open source library: https://github.com/qifengzhang007/gooxml.
 As the original repository is not maintained , can not repair the original repository by submitting the code in the way of problems , so I used the original repository of the code , for secondary development / repair some of the possible bugs .
