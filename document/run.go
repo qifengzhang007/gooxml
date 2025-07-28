@@ -302,10 +302,12 @@ func (r Run) CurRunIsContainerPic() bool {
 // Note: The call to get the relevant image can only be made if there is an image underneath the run of the paragraph.
 func (r Run) GetPicInfo() (pics []pic.Pic) {
 	for _, contentItem := range r.x.EG_RunInnerContent {
-		for _, inlineItem := range contentItem.Drawing.Inline {
-			for _, anyItem := range inlineItem.Graphic.CT_GraphicalObject.GraphicData.Any {
-				if pic, ok := anyItem.(*pic.Pic); ok {
-					pics = append(pics, *pic)
+		if contentItem.Drawing != nil {
+			for _, inlineItem := range contentItem.Drawing.Inline {
+				for _, anyItem := range inlineItem.Graphic.CT_GraphicalObject.GraphicData.Any {
+					if pict, ok := anyItem.(*pic.Pic); ok {
+						pics = append(pics, *pict)
+					}
 				}
 			}
 		}
