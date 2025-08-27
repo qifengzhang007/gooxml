@@ -3,9 +3,9 @@
 package main
 
 import (
-	"log"
-
+	"fmt"
 	"github.com/qifengzhang007/gooxml/document"
+	"log"
 )
 
 var lorem = `
@@ -23,8 +23,23 @@ func main() {
 	// document that contains text in each style of interest.  As an example,
 	// see the template.docx in this directory.  It contains a paragraph set in
 	// each style that Word supports by default.
-	doc, err := document.Open(pathPre + "红头文件精简版本测试使用.docx")
+	doc, err := document.Open(pathPre + "下划线精简版本测试.docx")
+	for index, p := range doc.Paragraphs() {
 
+		fmt.Printf("序号：%d - 段落类型：%+v  - 文本 ：%+v\n", index, p.JudgeParagraphType(p), p.GetAllParagraphText(p))
+
+		for _, run := range p.Runs() {
+
+			tmpR := p.InsertRunAfter(run)
+			tmpR.AddText("新-" + run.Text())
+			tmpR.SetExtraElement((p.Runs()[0]).GetExtraElement())
+			p.RemoveRun(run)
+
+		}
+
+	}
+
+	fmt.Println("还有段落吗？", len(doc.Paragraphs()))
 	if err != nil {
 		log.Fatalf("error opening Windows Word 2016 document: %s", err)
 	}

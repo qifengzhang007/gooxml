@@ -61,23 +61,10 @@
 - [使用现有 Word 文档作为模板](./_examples/document/use-template)    打开文档作为模板，重用文档中创建的样式。
 - [填写表单字段](./_examples/document/fill-out-form)    打开包含嵌入表单字段的文档，填写字段并将结果保存为新的已填写表单。
 - [编辑现有文档](./_examples/document/edit-document)    打开现有文档并替换/删除文本，而不修改格式。
+- [替换文本](./_examples/document/replace-text-or-pic)    指定文本替换为新文本或者图片。
 
 ### 电子表格示例
-
-- [简单](./_examples/spreadsheet/simple)    一个包含几个单元格的简单表格
-- [命名单元格](./_examples/spreadsheet/named-cells)    引用行和单元格的不同方式
-- [单元格数字/日期/时间格式](./_examples/spreadsheet/number-date-time-formats)    创建具有各种数字/日期/时间格式的单元格
-- [折线图](./_examples/spreadsheet/line-chart)/[折线图 3D](./_examples/spreadsheet/line-chart-3d)
-  折线图
-- [柱状图](./_examples/spreadsheet/bar-chart)    柱状图
-- [多个图表](./_examples/spreadsheet/multiple-charts)    在单个表格上多个图表
-- [命名单元格范围](./_examples/spreadsheet/named-ranges)    命名单元格范围
-- [合并单元格](./_examples/spreadsheet/merged)    合并和拆分单元格
-- [条件格式化](./_examples/spreadsheet/conditional-formatting)    条件格式化单元格，样式，渐变，图标，数据条
-- [复杂](./_examples/spreadsheet/complex)    多个图表，自动筛选和条件格式化
-- [边框](./_examples/spreadsheet/borders)    单个单元格边框和围绕单元格范围的矩形边框。
-- [验证](./_examples/spreadsheet/validation)    数据验证，包括组合框下拉列表。
-- [冻结行/列](./_examples/spreadsheet/freeze-rows-cols)    具有冻结标题列和行的表格
+- 虽然包含excel处理功能，但是请不要使用，本人没有时间和精力去维护，推荐使用 `https://github.com/qax-os/excelize` 
 
 ### 幻灯片示例
 
