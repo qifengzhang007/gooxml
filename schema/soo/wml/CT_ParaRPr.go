@@ -104,6 +104,7 @@ type CT_ParaRPr struct {
 	OMath *CT_OnOff
 	// Revision Information for Run Properties on the Paragraph Mark
 	RPrChange *CT_ParaRPrChange
+	Ligatures *CT_Ligatures
 }
 
 func NewCT_ParaRPr() *CT_ParaRPr {
@@ -113,6 +114,10 @@ func NewCT_ParaRPr() *CT_ParaRPr {
 
 func (m *CT_ParaRPr) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	e.EncodeToken(start)
+	if m.Ligatures != nil {
+		seligatures := xml.StartElement{Name: xml.Name{Local: "w14:ligatures"}}
+		e.EncodeElement(m.Ligatures, seligatures)
+	}
 	if m.Ins != nil {
 		seins := xml.StartElement{Name: xml.Name{Local: "w:ins"}}
 		e.EncodeElement(m.Ins, seins)
@@ -304,6 +309,11 @@ lCT_ParaRPr:
 		switch el := tok.(type) {
 		case xml.StartElement:
 			switch el.Name {
+			case xml.Name{Space: "http://schemas.microsoft.com/office/word/2010/wordml", Local: "ligatures"}:
+				m.Ligatures = NewCT_Ligatures()
+				if err := d.DecodeElement(m.Ligatures, &el); err != nil {
+					return err
+				}
 			case xml.Name{Space: "http://schemas.openxmlformats.org/wordprocessingml/2006/main", Local: "ins"},
 				xml.Name{Space: "http://purl.oclc.org/ooxml/wordprocessingml/main", Local: "ins"}:
 				m.Ins = NewCT_TrackChange()

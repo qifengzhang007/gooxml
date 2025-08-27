@@ -11,7 +11,6 @@ package math
 
 import (
 	"encoding/xml"
-
 	"github.com/qifengzhang007/gooxml"
 )
 

@@ -26,7 +26,7 @@ func NewDocument() *Document {
 }
 
 func (m *Document) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "xmlns"}, Value: "http://schemas.openxmlformats.org/wordprocessingml/2006/main"})
+	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "xmlns:wpc"}, Value: "http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas"})
 	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "xmlns:a"}, Value: "http://schemas.openxmlformats.org/drawingml/2006/main"})
 	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "xmlns:m"}, Value: "http://schemas.openxmlformats.org/officeDocument/2006/math"})
 	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "xmlns:ma"}, Value: "http://schemas.openxmlformats.org/schemaLibrary/2006/main"})
@@ -37,8 +37,15 @@ func (m *Document) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "xmlns:wp"}, Value: "http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing"})
 	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "xmlns:xml"}, Value: "http://www.w3.org/XML/1998/namespace"})
 	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "xmlns:v"}, Value: "urn:schemas-microsoft-com:vml"})
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "xmlns:o"}, Value: "urn:schemas-microsoft-com:office:office"})
-	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "xmlns:w10"}, Value: "urn:schemas-microsoft-com:office:word"})
+	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "xmlns:w14"}, Value: "http://schemas.microsoft.com/office/word/2010/wordml"})
+	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "xmlns:w15"}, Value: "http://schemas.microsoft.com/office/word/2012/wordml"})
+	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "xmlns:wp14"}, Value: "http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing"})
+	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "xmlns:wps"}, Value: "http://schemas.microsoft.com/office/word/2010/wordprocessingShape"})
+	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "xmlns:wpsCustomData"}, Value: "http://www.wps.cn/officeDocument/2013/wpsCustomData"})
+	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "xmlns:wpg"}, Value: "http://schemas.microsoft.com/office/word/2010/wordprocessingGroup"})
+	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "xmlns:wpi"}, Value: "http://schemas.microsoft.com/office/word/2010/wordprocessingInk"})
+	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "xmlns:mc"}, Value: "http://schemas.openxmlformats.org/markup-compatibility/2006"})
+	start.Attr = append(start.Attr, xml.Attr{Name: xml.Name{Local: "mc:Ignorable"}, Value: "w14 w15 wp14"})
 	start.Name.Local = "w:document"
 	return m.CT_Document.MarshalXML(e, start)
 }

@@ -18,6 +18,7 @@ import (
 //开发参考文件
 
 type CT_RPr struct {
+	Ligatures *CT_Ligatures
 	// Referenced Character Style
 	RStyle *CT_String
 	// Run Fonts
@@ -107,6 +108,10 @@ func NewCT_RPr() *CT_RPr {
 
 func (m *CT_RPr) MarshalXML(e *xml.Encoder, start xml.StartElement) error {
 	e.EncodeToken(start)
+	if m.Ligatures != nil {
+		seligatures := xml.StartElement{Name: xml.Name{Local: "w14:ligatures"}}
+		e.EncodeElement(m.Ligatures, seligatures)
+	}
 	if m.RStyle != nil {
 		serStyle := xml.StartElement{Name: xml.Name{Local: "w:rStyle"}}
 		e.EncodeElement(m.RStyle, serStyle)
@@ -520,6 +525,11 @@ lCT_RPr:
 				xml.Name{Space: "http://purl.oclc.org/ooxml/wordprocessingml/main", Local: "rPrChange"}:
 				m.RPrChange = NewCT_RPrChange()
 				if err := d.DecodeElement(m.RPrChange, &el); err != nil {
+					return err
+				}
+			case xml.Name{Space: "http://schemas.microsoft.com/office/word/2010/wordml", Local: "ligatures"}:
+				m.Ligatures = NewCT_Ligatures()
+				if err := d.DecodeElement(m.Ligatures, &el); err != nil {
 					return err
 				}
 			default:
