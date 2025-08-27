@@ -14,8 +14,8 @@
 ### 包安装
 
 ```code  
-    // 在安装此包之前，请检查最新的标签版本号，例如 v1.0.12-alpha
-    go get  github.com/qifengzhang007/gooxml@v1.0.12-alpha
+    // 在安装此包之前，请检查最新的标签版本号，例如 v1.0.15-alpha
+    go get  github.com/qifengzhang007/gooxml@v1.0.15-alpha
 ```
 
 ![gooxml](./_examples/preview.png "gooxml")

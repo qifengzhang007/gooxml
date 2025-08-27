@@ -56,7 +56,7 @@ DOCX/XLSX/PPTX.
 
 ## Installation ##
     // Before installing this package, please check the latest tags version number, e.g. v1.0.12-alpha
-	go get  github.com/qifengzhang007/gooxml@v1.0.12-alpha
+	go get  github.com/qifengzhang007/gooxml@v1.0.15-alpha
 
 
 ## Document Examples ##
